@@ -1,4 +1,4 @@
-// File: C:\bishesh\OneDrive - University of East London\decima minus\demo\src\app\page.tsx
+// File: /workspaces/decimalminus/src/app/page.tsx
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
