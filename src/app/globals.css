@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode */
+    --background: #F8FAFC; /* Ice White */
+    --accent-maroon: #2563EB; /* Royal Blue override */
+    --accent-blood: #1E3A8A; /* Corporate Deep Blue override */
+    --cool-grey: #111827; /* Slate Black */
+    --pure-black: #000000;
+  }
+  
+  .dark {
+    /* Dark Mode */
+    --background: #020617; /* Navy/Slate */
+    --accent-maroon: #3B82F6; /* Cobalt/Cyan override */
+    --accent-blood: #00D4FF; /* Cyan override */
+    --cool-grey: #9CA3AF; /* Cool Grey */
+    --pure-black: #000000;
+  }
+}

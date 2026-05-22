@@ -1,0 +1,54 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+export default function Footer() {
+  const pathname = usePathname();
+  
+  if (pathname?.startsWith("/admin")) return null;
+
+  return (
+    <footer className="w-full mt-auto mt-20 backdrop-blur-lg bg-white/70 dark:bg-slate-900/40 border-t border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto p-12 grid grid-cols-1 md:grid-cols-3 gap-12">
+        
+        {/* Registration Column */}
+        <div className="flex flex-col gap-3">
+          <span className="font-bold text-lg text-slate-900 dark:text-white tracking-tighter">Demo<span className="text-accent-maroon">.</span> Technologies PLC</span>
+          <div className="flex flex-col gap-1 mt-2 text-sm">
+            <span>Registered in England and Wales.</span>
+            <span>Registration Classification: Blockchain Infrastructure.</span>
+            <span>Company Registration Number: [00000000]</span>
+          </div>
+          <div className="flex flex-col gap-1 mt-4 text-sm">
+            <span className="font-semibold text-slate-900 dark:text-white">Registered Address:</span>
+            <span>[Level 39, One Canada Square]</span>
+            <span>[Canary Wharf, London]</span>
+            <span>[E14 5AB, United Kingdom]</span>
+          </div>
+        </div>
+
+        {/* Quick Links Column */}
+        <div className="flex flex-col gap-2">
+          <span className="font-bold text-slate-900 dark:text-white mb-2">Platform Infrastructure</span>
+          <div className="flex flex-col leading-loose">
+            <Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</Link>
+            <Link href="/privacy#cookies" className="hover:text-blue-400 transition-colors">Cookie Policy</Link>
+            <Link href="/privacy#ccpa" className="hover:text-blue-400 transition-colors">Do Not Sell My Personal Information</Link>
+          </div>
+        </div>
+
+        {/* Regulatory Disclosure Column */}
+        <div className="flex flex-col gap-4">
+          <span className="font-bold text-slate-900 dark:text-white">Regulatory Disclosure</span>
+          <p className="text-sm text-slate-400 leading-relaxed">
+            For Informational Purposes Only. Nothing on this website constitutes financial, investment, or legal advice. Demo Ltd is a technology infrastructure provider, not a broker-dealer, exchange, or financial advisor. Digital assets are highly volatile and largely unregulated. Not an offer to sell or solicit securities in the United States or any other jurisdiction.
+          </p>
+          <span className="text-xs opacity-50 mt-auto">&copy; {new Date().getFullYear()} Demo Technologies PLC. All rights reserved.</span>
+        </div>
+
+      </div>
+    </footer>
+  );
+}
