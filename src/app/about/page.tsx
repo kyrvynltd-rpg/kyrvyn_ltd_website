@@ -8,7 +8,7 @@ export default function About() {
         <GlassCard className="p-8 prose prose-lg dark:prose-invert max-w-none">
           <h2 className="text-accent-maroon dark:text-accent-blood mt-0">Enterprise Architecture</h2>
           <p className="text-slate-900 dark:text-slate-400">
-            Demo provides institutional-grade blockchain infrastructure specifically designed for high-trust environments in the United Kingdom and globally. Our architecture guarantees transaction immutability, mathematically secure consensus algorithms, and strict protocol compliance.
+            Decima Minus Ltd provides institutional-grade blockchain infrastructure specifically designed for high-trust environments in the United Kingdom and globally. Our architecture guarantees transaction immutability, mathematically secure consensus algorithms, and strict protocol compliance.
           </p>
           <p className="text-slate-900 dark:text-slate-400 mb-0">
             Engineered for maximum resilience and zero-downtime operations, our scalable networks form the foundational tier of modern secure finance and data integrity systems. We architect secure pathways for enterprise adoption.

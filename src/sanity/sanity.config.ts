@@ -8,8 +8,8 @@ const dataset = (process.env.NEXT_PUBLIC_SANITY_DATASET || "production").trim()
 
 export default defineConfig({
   basePath: '/admin',
-  name: 'Demo_CMS',
-  title: 'Demo Institutional CMS',
+  name: 'DecimaMinusLtd_CMS',
+  title: 'Decima Minus Ltd CMS',
 
   projectId,
   dataset,

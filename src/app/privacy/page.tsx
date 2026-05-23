@@ -12,17 +12,17 @@ export default function PrivacyPolicy() {
           
           <h2 className="text-slate-900 dark:text-white text-2xl font-semibold mt-8 mb-4">1. GDPR Data Handling Practices</h2>
           <p className="text-slate-900 dark:text-slate-400 leading-relaxed mb-6">
-            [Structured Markdown Placeholder: Detail strict GDPR compliance mapping for the collection of corporate tracking identifiers via the Contact Operations and Research Newsletter pipeline. All data is localized in physically isolated UK servers under standard tier-4 data protection statutes.]
+            Decima Minus Ltd collects corporate contact details submitted through Contact Operations and newsletter forms. Data is stored on UK-based servers and used only to respond to inquiries and provide requested updates.
           </p>
           
           <h2 id="cookies" className="text-slate-900 dark:text-white text-2xl font-semibold mt-8 mb-4">2. Cookie & Tracker Policy</h2>
           <p className="text-slate-900 dark:text-slate-400 leading-relaxed mb-6">
-            [Structured Markdown Placeholder: Provide exhaustive breakdown of strictly necessary infrastructure cookies vs. behavioral analytics modules. Users maintain total revocation rights via the automated Trust Blue Consent Protocol.]
+            We use essential cookies required for site functionality and may use limited analytics to improve performance. You can control cookies through your browser settings, and we do not use cookies to sell or share personal data.
           </p>
 
           <h2 id="ccpa" className="text-slate-900 dark:text-white text-2xl font-semibold mt-8 mb-4">3. CCPA Disclosures & Rights</h2>
           <p className="text-slate-900 dark:text-slate-400 leading-relaxed mb-6">
-            [Structured Markdown Placeholder: Execute California Consumer Privacy Act requirements. Implement the 'Do Not Sell or Share My Personal Information' mechanism and elaborate on the non-sale of underlying infrastructural interaction data to third-party aggregation exchanges.]
+            Decima Minus Ltd does not sell or share personal information. California residents may request access or deletion of personal data by contacting decimaminus@gmail.com.
           </p>
         </div>
       </GlassCard>

@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
-  title: "Demo | Web3 Blockchain",
+  title: "DecimaMinusLtd",
   description: "Institutional-grade blockchain infrastructure and secure decentralized operations platform.",
   icons: {
     icon: "/images/logo1.png",
