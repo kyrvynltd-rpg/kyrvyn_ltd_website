@@ -6,7 +6,8 @@ import { ArrowLeft } from "lucide-react";
 
 export const revalidate = 60;
 
-export default async function BlogPost({ params }: { params: { slug: string } }) {
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const query = `*[_type == "post" && slug.current == $slug][0] {
     title,
     "authorName": author->name,
@@ -15,7 +16,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   }`;
   
   // Await the GROQ query parameter extraction
-  const post = await client.fetch(query, { slug: params.slug }).catch(() => null);
+  const post = await client.fetch(query, { slug }).catch(() => null);
 
   if (!post) {
     return (

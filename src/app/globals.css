@@ -1,3 +1,6 @@
+@import "@fontsource/inter/latin.css";
+@import "@fontsource/playfair-display/latin.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
