@@ -36,7 +36,7 @@ export default function Contact() {
             required
             aria-label="Corporate Email"
             className="w-full bg-white/80 dark:bg-black/80 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 outline-none focus:border-accent-maroon dark:focus:border-accent-blood transition-colors invalid:[&:not(:placeholder-shown)]:border-red-500 valid:[&:not(:placeholder-shown)]:border-green-500 peer"
-            placeholder="inquiries@demo.co.uk"
+            placeholder="decimaminus@gmail.com"
           />
           <span className="text-xs text-red-500 hidden peer-invalid:[&:not(:placeholder-shown)]:block">Please provide a valid corporate email address.</span>
         </div>
@@ -64,7 +64,7 @@ export default function Contact() {
             className="mt-1 w-4 h-4 cursor-pointer accent-accent-maroon dark:accent-accent-blood peer" 
           />
           <label htmlFor="gdpr-consent" className="text-sm text-cool-grey dark:text-gray-400 select-none">
-            I explicitly consent to the processing of my corporate data in accordance with the UK GDPR framework and Demo Technologies PLC's <a href="/privacy-policy" className="text-accent-maroon dark:text-accent-blood hover:underline font-semibold">Data Privacy Policy</a>. I authorize the retention of these records for infrastructural communications.
+            I explicitly consent to the processing of my corporate data in accordance with the UK GDPR framework and Decima Minus Ltd's <a href="/privacy-policy" className="text-accent-maroon dark:text-accent-blood hover:underline font-semibold">Data Privacy Policy</a>. I authorize the retention of these records for infrastructural communications.
           </label>
         </div>
 

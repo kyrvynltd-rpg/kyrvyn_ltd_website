@@ -14,17 +14,17 @@ export default function Footer() {
         
         {/* Registration Column */}
         <div className="flex flex-col gap-3">
-          <span className="font-bold text-lg text-slate-900 dark:text-white tracking-tighter">Demo<span className="text-accent-maroon">.</span> Technologies PLC</span>
+          <span className="font-bold text-lg text-slate-900 dark:text-white tracking-tighter">Decima Minus Ltd</span>
           <div className="flex flex-col gap-1 mt-2 text-sm">
             <span>Registered in England and Wales.</span>
             <span>Registration Classification: Blockchain Infrastructure.</span>
-            <span>Company Registration Number: [00000000]</span>
+            <span>Company Registration Number: 17078769</span>
           </div>
           <div className="flex flex-col gap-1 mt-4 text-sm">
             <span className="font-semibold text-slate-900 dark:text-white">Registered Address:</span>
-            <span>[Level 39, One Canada Square]</span>
-            <span>[Canary Wharf, London]</span>
-            <span>[E14 5AB, United Kingdom]</span>
+            <span>124-128 City Road</span>
+            <span>London, United Kingdom</span>
+            <span>EC1V 2NX</span>
           </div>
         </div>
 
@@ -43,9 +43,9 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <span className="font-bold text-slate-900 dark:text-white">Regulatory Disclosure</span>
           <p className="text-sm text-slate-400 leading-relaxed">
-            For Informational Purposes Only. Nothing on this website constitutes financial, investment, or legal advice. Demo Ltd is a technology infrastructure provider, not a broker-dealer, exchange, or financial advisor. Digital assets are highly volatile and largely unregulated. Not an offer to sell or solicit securities in the United States or any other jurisdiction.
+            For Informational Purposes Only. Nothing on this website constitutes financial, investment, or legal advice. Decima Minus Ltd is a technology infrastructure provider, not a broker-dealer, exchange, or financial advisor. Digital assets are highly volatile and largely unregulated. Not an offer to sell or solicit securities in the United States or any other jurisdiction.
           </p>
-          <span className="text-xs opacity-50 mt-auto">&copy; {new Date().getFullYear()} Demo Technologies PLC. All rights reserved.</span>
+          <span className="text-xs opacity-50 mt-auto">&copy; {new Date().getFullYear()} Decima Minus Ltd. All rights reserved.</span>
         </div>
 
       </div>
