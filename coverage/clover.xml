@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1780861338097" clover="3.2.0">
+  <project timestamp="1780861338097" name="All files">
+    <metrics statements="129" coveredstatements="119" conditionals="78" coveredconditionals="64" methods="36" coveredmethods="33" elements="243" coveredelements="216" complexity="0" loc="129" ncloc="129" packages="3" files="9" classes="9"/>
+    <package name="components.forms">
+      <metrics statements="28" coveredstatements="26" conditionals="24" coveredconditionals="19" methods="4" coveredmethods="3"/>
+      <file name="NewsletterForm.tsx" path="C:\Users\Gabriele\Documents\Gabriele\Kyrvyn Ltd\website\Kyrvyn_Ltd\src\components\forms\NewsletterForm.tsx">
+        <metrics statements="28" coveredstatements="26" conditionals="24" coveredconditionals="19" methods="4" coveredmethods="3"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="15" count="71" type="stmt"/>
+        <line num="16" count="71" type="stmt"/>
+        <line num="17" count="71" type="stmt"/>
+        <line num="18" count="71" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="44" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="52" count="71" type="cond" truecount="1" falsecount="1"/>
+        <line num="53" count="71" type="stmt"/>
+        <line num="69" count="61" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="115" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.ui">
+      <metrics statements="100" coveredstatements="92" conditionals="54" coveredconditionals="45" methods="32" coveredmethods="30"/>
+      <file name="BackgroundBlocks.tsx" path="C:\Users\Gabriele\Documents\Gabriele\Kyrvyn Ltd\website\Kyrvyn_Ltd\src\components\ui\BackgroundBlocks.tsx">
+        <metrics statements="59" coveredstatements="54" conditionals="10" coveredconditionals="5" methods="15" coveredmethods="14"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="1120" type="stmt"/>
+        <line num="20" count="1120" type="stmt"/>
+        <line num="21" count="1120" type="stmt"/>
+        <line num="22" count="1120" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="33" count="5" type="stmt"/>
+        <line num="35" count="5" type="stmt"/>
+        <line num="36" count="140" type="stmt"/>
+        <line num="37" count="140" type="stmt"/>
+        <line num="38" count="140" type="stmt"/>
+        <line num="39" count="140" type="stmt"/>
+        <line num="40" count="140" type="stmt"/>
+        <line num="41" count="140" type="stmt"/>
+        <line num="42" count="140" type="stmt"/>
+        <line num="43" count="140" type="stmt"/>
+        <line num="44" count="140" type="stmt"/>
+        <line num="58" count="5" type="stmt"/>
+        <line num="59" count="5" type="stmt"/>
+        <line num="60" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="62" count="5" type="stmt"/>
+        <line num="63" count="5" type="stmt"/>
+        <line num="64" count="5" type="stmt"/>
+        <line num="66" count="5" type="stmt"/>
+        <line num="67" count="186" type="stmt"/>
+        <line num="68" count="186" type="stmt"/>
+        <line num="69" count="186" type="stmt"/>
+        <line num="72" count="5" type="stmt"/>
+        <line num="74" count="5" type="stmt"/>
+        <line num="75" count="5" type="stmt"/>
+        <line num="76" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="79" count="5" type="stmt"/>
+        <line num="80" count="5" type="stmt"/>
+        <line num="82" count="5" type="stmt"/>
+        <line num="83" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="85" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="90" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="96" count="5" type="stmt"/>
+        <line num="97" count="5" type="stmt"/>
+        <line num="98" count="5" type="stmt"/>
+        <line num="100" count="5" type="stmt"/>
+        <line num="101" count="5" type="stmt"/>
+        <line num="102" count="5" type="stmt"/>
+        <line num="103" count="5" type="stmt"/>
+        <line num="104" count="5" type="stmt"/>
+        <line num="105" count="5" type="stmt"/>
+        <line num="109" count="5" type="stmt"/>
+        <line num="112" count="140" type="stmt"/>
+      </file>
+      <file name="Badge.tsx" path="C:\Users\Gabriele\Documents\Gabriele\Kyrvyn Ltd\website\Kyrvyn_Ltd\src\components\ui\Badge.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="11" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="4" type="stmt"/>
+      </file>
+      <file name="Button.tsx" path="C:\Users\Gabriele\Documents\Gabriele\Kyrvyn Ltd\website\Kyrvyn_Ltd\src\components\ui\Button.tsx">
+        <metrics statements="10" coveredstatements="8" conditionals="15" coveredconditionals="13" methods="4" coveredmethods="4"/>
+        <line num="21" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="33" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+      </file>
+      <file name="CookieBanner.tsx" path="C:\Users\Gabriele\Documents\Gabriele\Kyrvyn Ltd\website\Kyrvyn_Ltd\src\components\ui\CookieBanner.tsx">
+        <metrics statements="16" coveredstatements="15" conditionals="10" coveredconditionals="8" methods="6" coveredmethods="5"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="19" count="9" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="24" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="7" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+      </file>
+      <file name="GlassCard.tsx" path="C:\Users\Gabriele\Documents\Gabriele\Kyrvyn Ltd\website\Kyrvyn_Ltd\src\components\ui\GlassCard.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="9" count="72" type="stmt"/>
+      </file>
+      <file name="SectionHeading.tsx" path="C:\Users\Gabriele\Documents\Gabriele\Kyrvyn Ltd\website\Kyrvyn_Ltd\src\components\ui\SectionHeading.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="25" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="1" type="stmt"/>
+      </file>
+      <file name="ThemeToggle.tsx" path="C:\Users\Gabriele\Documents\Gabriele\Kyrvyn Ltd\website\Kyrvyn_Ltd\src\components\ui\ThemeToggle.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="15" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="21" count="2" type="cond" truecount="2" falsecount="0"/>
+      </file>
+    </package>
+    <package name="lib">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="caseStudies.ts" path="C:\Users\Gabriele\Documents\Gabriele\Kyrvyn Ltd\website\Kyrvyn_Ltd\src\lib\caseStudies.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

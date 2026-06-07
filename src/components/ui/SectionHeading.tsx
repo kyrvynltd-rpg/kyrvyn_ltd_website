@@ -15,9 +15,7 @@ export function SectionHeading({
         {title}
       </h2>
       {subtitle && (
-        <p className="text-slate-700 dark:text-slate-400 max-w-3xl leading-relaxed">
-          {subtitle}
-        </p>
+        <p className="text-slate-700 dark:text-slate-400 max-w-3xl leading-relaxed">{subtitle}</p>
       )}
     </div>
   );
@@ -25,10 +23,5 @@ export function SectionHeading({
 
 export function SectionDivider(props: ComponentProps<"div">) {
   const { className = "", ...rest } = props;
-  return (
-    <div
-      className={`h-px w-full bg-black/10 dark:bg-white/10 ${className}`}
-      {...rest}
-    />
-  );
+  return <div className={`h-px w-full bg-black/10 dark:bg-white/10 ${className}`} {...rest} />;
 }

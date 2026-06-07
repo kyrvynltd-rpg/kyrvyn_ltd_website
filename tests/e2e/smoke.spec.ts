@@ -9,8 +9,8 @@ test("background blocks are mounted and animating", async ({ page }) => {
   await page.goto("/");
   const blocks = page.locator(".kyrvyn-blocks");
   await expect(blocks).toHaveCount(1);
-  const name = await blocks.evaluate((el) =>
-    getComputedStyle(el.querySelector(".kyrvyn-block") as HTMLElement).animationName
+  const name = await blocks.evaluate(
+    (el) => getComputedStyle(el.querySelector(".kyrvyn-block") as HTMLElement).animationName,
   );
   expect(name).toContain("kyrvyn-block-float");
 });
@@ -23,7 +23,9 @@ test("projects listing loads", async ({ page }) => {
 
 test("projects detail route renders", async ({ page }) => {
   await page.goto("/projects/enterprise-web-platform-modernization");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText("Enterprise Web Platform Modernization");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "Enterprise Web Platform Modernization",
+  );
 });
 
 test("blog listing loads", async ({ page }) => {

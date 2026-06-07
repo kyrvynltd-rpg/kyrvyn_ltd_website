@@ -1,10 +1,9 @@
 import { GlassCard } from "@/components/ui/GlassCard";
 import { client } from "@/sanity/sanity.client";
-import Link from "next/link";
 import type { TypedObject } from "@portabletext/types";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 
-export const revalidate = 60;
+export const dynamic = "force-static";
 
 type Post = {
   _id: string;
@@ -42,7 +41,7 @@ export default async function Blog() {
     publishedAt,
     body
   }`;
-  
+
   // Await the GROQ query
   const posts = await client.fetch<Post[]>(query).catch(() => []);
 
@@ -50,12 +49,15 @@ export default async function Blog() {
     <div className="py-12 max-w-4xl mx-auto z-10 relative px-4">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
         <GlassCard className="p-8 md:flex-1 shadow-xl">
-          <h1 className="text-5xl font-bold mb-4 font-serif text-slate-900 dark:text-white">Insights</h1>
+          <h1 className="text-5xl font-bold mb-4 font-serif text-slate-900 dark:text-white">
+            Insights
+          </h1>
           <p className="text-slate-900 dark:text-slate-400">
-            Digital transformation guidance, engineering playbooks, and practical notes on building resilient platforms.
+            Digital transformation guidance, engineering playbooks, and practical notes on building
+            resilient platforms.
           </p>
         </GlassCard>
-        
+
         <NewsletterForm compact />
       </div>
 
@@ -66,20 +68,28 @@ export default async function Blog() {
           </GlassCard>
         )}
         {posts.map((post) => (
-          <Link href={`/blog/${post.slug}`} key={post._id} className="block">
-            <GlassCard className="group cursor-pointer p-8 transition-transform hover:-translate-y-1">
+          <div key={post._id} className="block">
+            <GlassCard className="group p-8 transition-transform hover:-translate-y-1">
               <time className="text-sm font-medium text-accent-maroon dark:text-accent-blood mb-2 block">
-                {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) : "Unpublished"}
+                {post.publishedAt
+                  ? new Date(post.publishedAt).toLocaleDateString("en-US", {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    })
+                  : "Unpublished"}
               </time>
               <h2 className="text-3xl font-serif font-bold mb-3 group-hover:text-accent-maroon dark:group-hover:text-accent-blood transition-colors">
                 {post.title}
               </h2>
-              {post.authorName && <p className="text-xs text-slate-400 mb-4">By {post.authorName}</p>}
+              {post.authorName && (
+                <p className="text-xs text-slate-400 mb-4">By {post.authorName}</p>
+              )}
               <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
                 {excerptFromPortableText(post.body) || "No summary provided."}
               </p>
             </GlassCard>
-          </Link>
+          </div>
         ))}
       </div>
     </div>

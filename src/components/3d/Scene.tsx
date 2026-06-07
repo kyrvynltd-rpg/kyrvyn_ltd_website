@@ -42,15 +42,22 @@ export default function Scene() {
         gl={{ powerPreference: isMobile ? "low-power" : "high-performance", antialias: !isMobile }}
         camera={{ position: [0, 0, 0], fov: 75 }}
       >
-        <fog attach="fog" args={[theme === "dark" ? "#020617" : "#F8FAFC", theme === "dark" ? 10 : 15, theme === "dark" ? 60 : 120]} />
+        <fog
+          attach="fog"
+          args={[
+            theme === "dark" ? "#020617" : "#F8FAFC",
+            theme === "dark" ? 10 : 15,
+            theme === "dark" ? 60 : 120,
+          ]}
+        />
         <ambientLight intensity={theme === "dark" ? 0.3 : 1.2} />
         <directionalLight position={[10, 10, 5]} intensity={0.5} />
-        
+
         <Tunnel theme={theme} isMobile={isMobile} />
         <VascularConnections theme={theme} />
         <HashRain theme={theme} isMobile={isMobile} />
         {!isMobile && <MempoolParticles theme={theme} />}
-        
+
         <Environment preset="city" />
       </Canvas>
     </div>

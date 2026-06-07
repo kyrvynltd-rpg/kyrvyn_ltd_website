@@ -14,7 +14,7 @@ export function MempoolParticles({ theme }: { theme: string }) {
       velocity: new THREE.Vector3(
         (Math.random() - 0.5) * 0.025,
         (Math.random() - 0.5) * 0.025,
-        (Math.random() - 0.5) * 0.025
+        (Math.random() - 0.5) * 0.025,
       ),
       baseX: (Math.random() - 0.5) * 40,
       baseY: (Math.random() - 0.5) * 40,
@@ -35,46 +35,46 @@ export function MempoolParticles({ theme }: { theme: string }) {
     pointerVec.set(
       (state.pointer.x * state.viewport.width) / 2,
       (state.pointer.y * state.viewport.height) / 2,
-      zDepth
+      zDepth,
     );
 
     for (let i = 0; i < count; i++) {
-        const pd = particleData[i];
-        
-        // Compute active position incorporating continuous drift
-        const px = pd.baseX;
-        const py = pd.baseY;
-        const pz = pd.baseZ;
+      const pd = particleData[i];
 
-        // Apply mouse repulsion
-        const dx = px - pointerVec.x;
-        const dy = py - pointerVec.y;
-        const dz = pz - pointerVec.z;
-        const distSq = dx*dx + dy*dy + dz*dz;
+      // Compute active position incorporating continuous drift
+      const px = pd.baseX;
+      const py = pd.baseY;
+      const pz = pd.baseZ;
 
-        // Repel threshold (15 units)
-        if (distSq < 150) {
-            const dist = Math.sqrt(distSq);
-            const force = (12 - dist) / 12;
-            pd.velocity.x += (dx / dist) * force * 0.025;
-            pd.velocity.y += (dy / dist) * force * 0.025;
-            pd.velocity.z += (dz / dist) * force * 0.025;
-        }
+      // Apply mouse repulsion
+      const dx = px - pointerVec.x;
+      const dy = py - pointerVec.y;
+      const dz = pz - pointerVec.z;
+      const distSq = dx * dx + dy * dy + dz * dz;
 
-        // Apply drag and bounds to velocity
-        pd.velocity.multiplyScalar(0.92);
+      // Repel threshold (15 units)
+      if (distSq < 150) {
+        const dist = Math.sqrt(distSq);
+        const force = (12 - dist) / 12;
+        pd.velocity.x += (dx / dist) * force * 0.025;
+        pd.velocity.y += (dy / dist) * force * 0.025;
+        pd.velocity.z += (dz / dist) * force * 0.025;
+      }
 
-        // Apply velocity to base position
-        pd.baseX += pd.velocity.x;
-        pd.baseY += pd.velocity.y;
-        pd.baseZ += pd.velocity.z;
+      // Apply drag and bounds to velocity
+      pd.velocity.multiplyScalar(0.92);
 
-        // Reset particles if they fly completely off map relative to camera
-        const relativeZ = pd.baseZ - state.camera.position.z;
-        if (relativeZ > 10) pd.baseZ -= 100;
-        if (relativeZ < -110) pd.baseZ += 100;
+      // Apply velocity to base position
+      pd.baseX += pd.velocity.x;
+      pd.baseY += pd.velocity.y;
+      pd.baseZ += pd.velocity.z;
 
-        posAttr.setXYZ(i, pd.baseX, pd.baseY, pd.baseZ);
+      // Reset particles if they fly completely off map relative to camera
+      const relativeZ = pd.baseZ - state.camera.position.z;
+      if (relativeZ > 10) pd.baseZ -= 100;
+      if (relativeZ < -110) pd.baseZ += 100;
+
+      posAttr.setXYZ(i, pd.baseX, pd.baseY, pd.baseZ);
     }
     posAttr.needsUpdate = true;
   });

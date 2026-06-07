@@ -1,4 +1,4 @@
-import author from './author'
-import post from './post'
+import author from "./author";
+import post from "./post";
 
-export const schemaTypes = [post, author]
+export const schemaTypes = [post, author];

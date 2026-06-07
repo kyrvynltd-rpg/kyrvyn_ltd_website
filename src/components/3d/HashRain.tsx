@@ -39,7 +39,7 @@ export function HashRain({ theme, isMobile }: { theme: string; isMobile?: boolea
 
   useFrame((state) => {
     if (!meshRef.current) return;
-    const colorHex = theme === "dark" ? "#3B82F6" : "#64748B"; 
+    const colorHex = theme === "dark" ? "#3B82F6" : "#64748B";
     targetColor.set(colorHex);
 
     const scrollOffset = scrollY.get() * 0.05;
@@ -47,8 +47,8 @@ export function HashRain({ theme, isMobile }: { theme: string; isMobile?: boolea
     particles.forEach((p, i) => {
       // Parallax application (hash moves faster than the camera base scroll)
       const currentZ = p.z + scrollOffset * p.speed;
-      
-      // Loop bounds 
+
+      // Loop bounds
       let mappedZ = currentZ % 200;
       if (mappedZ > state.camera.position.z + 10) mappedZ -= 200;
       if (mappedZ < -200) mappedZ += 200;
@@ -57,12 +57,12 @@ export function HashRain({ theme, isMobile }: { theme: string; isMobile?: boolea
       dummy.scale.set(p.scale, p.scale, p.scale);
       dummy.rotation.x = 0;
       dummy.rotation.y = 0;
-      
+
       dummy.updateMatrix();
       meshRef.current!.setMatrixAt(i, dummy.matrix);
       meshRef.current!.setColorAt(i, targetColor);
     });
-    
+
     meshRef.current.instanceMatrix.needsUpdate = true;
     if (meshRef.current.instanceColor) meshRef.current.instanceColor.needsUpdate = true;
   });
@@ -70,12 +70,12 @@ export function HashRain({ theme, isMobile }: { theme: string; isMobile?: boolea
   return (
     <instancedMesh ref={meshRef} args={[undefined, undefined, count]}>
       <planeGeometry args={[2, 0.5]} />
-      <meshBasicMaterial 
-        map={texture} 
-        transparent 
-        opacity={0.8} 
-        depthWrite={false} 
-        color="#ffffff" 
+      <meshBasicMaterial
+        map={texture}
+        transparent
+        opacity={0.8}
+        depthWrite={false}
+        color="#ffffff"
         blending={THREE.AdditiveBlending}
       />
     </instancedMesh>

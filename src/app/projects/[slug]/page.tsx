@@ -3,11 +3,7 @@ import { Badge } from "@/components/ui/Badge";
 import { ButtonLink } from "@/components/ui/Button";
 import { caseStudies } from "@/lib/caseStudies";
 
-export default async function ProjectCaseStudy({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function ProjectCaseStudy({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const cs = caseStudies.find((c) => c.slug === slug);
 
@@ -41,9 +37,7 @@ export default async function ProjectCaseStudy({
             <Badge variant="info">{cs.industry}</Badge>
           </div>
 
-          <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-            {cs.subtitle}
-          </p>
+          <p className="text-slate-700 dark:text-slate-300 leading-relaxed">{cs.subtitle}</p>
 
           <div className="flex flex-wrap gap-2">
             {cs.services.map((s) => (
@@ -53,17 +47,13 @@ export default async function ProjectCaseStudy({
 
           <div className="grid md:grid-cols-2 gap-8 pt-6 border-t border-black/10 dark:border-white/10">
             <div className="flex flex-col gap-3">
-              <h2 className="text-xl font-bold text-slate-900 dark:text-white">
-                Problem
-              </h2>
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white">Problem</h2>
               <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                 {cs.problem}
               </p>
             </div>
             <div className="flex flex-col gap-3">
-              <h2 className="text-xl font-bold text-slate-900 dark:text-white">
-                Solution
-              </h2>
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white">Solution</h2>
               <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
                 {cs.solution}
               </p>
@@ -72,9 +62,7 @@ export default async function ProjectCaseStudy({
 
           <div className="grid md:grid-cols-2 gap-8 pt-6 border-t border-black/10 dark:border-white/10">
             <div className="flex flex-col gap-3">
-              <h2 className="text-xl font-bold text-slate-900 dark:text-white">
-                Outcomes
-              </h2>
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white">Outcomes</h2>
               <ul className="text-sm text-slate-700 dark:text-slate-300 list-disc pl-5 space-y-2">
                 {cs.outcomes.map((o) => (
                   <li key={o}>{o}</li>
@@ -82,9 +70,7 @@ export default async function ProjectCaseStudy({
               </ul>
             </div>
             <div className="flex flex-col gap-3">
-              <h2 className="text-xl font-bold text-slate-900 dark:text-white">
-                Stack
-              </h2>
+              <h2 className="text-xl font-bold text-slate-900 dark:text-white">Stack</h2>
               <div className="flex flex-wrap gap-2">
                 {cs.stack.map((t) => (
                   <Badge key={t} variant="default">

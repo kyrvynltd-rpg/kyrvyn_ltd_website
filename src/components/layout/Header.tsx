@@ -27,7 +27,9 @@ export default function Header() {
     } else {
       document.body.style.overflow = "unset";
     }
-    return () => { document.body.style.overflow = "unset"; };
+    return () => {
+      document.body.style.overflow = "unset";
+    };
   }, [isOpen, isAdmin]);
 
   useEffect(() => {
@@ -73,7 +75,7 @@ export default function Header() {
         </nav>
         <div className="flex items-center gap-4">
           <ThemeToggle />
-          <button 
+          <button
             className="md:hidden p-2 -mr-2 text-slate-900 dark:text-white hover:text-accent-maroon transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Navigation Menu"

@@ -37,9 +37,12 @@ function isRateLimited(key: string) {
 function validate(payload: Partial<ContactPayload>) {
   if (payload.website) return { ok: false as const, status: 400, message: "Invalid request." };
   if (!payload.consent) return { ok: false as const, status: 400, message: "Consent is required." };
-  if (!payload.name || payload.name.trim().length < 2) return { ok: false as const, status: 400, message: "Name is required." };
-  if (!payload.email || !payload.email.includes("@")) return { ok: false as const, status: 400, message: "Email is required." };
-  if (!payload.message || payload.message.trim().length < 10) return { ok: false as const, status: 400, message: "Message is required." };
+  if (!payload.name || payload.name.trim().length < 2)
+    return { ok: false as const, status: 400, message: "Name is required." };
+  if (!payload.email || !payload.email.includes("@"))
+    return { ok: false as const, status: 400, message: "Email is required." };
+  if (!payload.message || payload.message.trim().length < 10)
+    return { ok: false as const, status: 400, message: "Message is required." };
   return { ok: true as const };
 }
 

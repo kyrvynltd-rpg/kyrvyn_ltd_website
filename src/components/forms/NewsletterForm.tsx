@@ -14,12 +14,28 @@ export function NewsletterForm({
 }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const isStaticExport = process.env.NEXT_PUBLIC_STATIC_EXPORT === "1";
+  const contactEmail = (process.env.NEXT_PUBLIC_CONTACT_EMAIL || "").trim();
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus("loading");
 
     try {
+      if (isStaticExport) {
+        if (!contactEmail) {
+          setStatus("error");
+          return;
+        }
+
+        const subject = "Newsletter subscription request";
+        const body = `Please add this email to the newsletter list:\n\n${email}`;
+        window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        setStatus("success");
+        setEmail("");
+        return;
+      }
+
       const r = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -63,12 +79,12 @@ export function NewsletterForm({
         </form>
         {status === "success" && (
           <div className="px-4 pb-3 text-xs text-emerald-600 dark:text-emerald-400">
-            Subscription received.
+            Subscription request prepared.
           </div>
         )}
         {status === "error" && (
           <div className="px-4 pb-3 text-xs text-red-600 dark:text-red-400">
-            Failed to subscribe. Try again.
+            Unable to subscribe. Try again.
           </div>
         )}
       </GlassCard>
@@ -76,7 +92,9 @@ export function NewsletterForm({
   }
 
   return (
-    <GlassCard className={`p-10 md:p-14 text-center max-w-3xl mx-auto flex flex-col items-center ${className}`}>
+    <GlassCard
+      className={`p-10 md:p-14 text-center max-w-3xl mx-auto flex flex-col items-center ${className}`}
+    >
       <div className="w-16 h-16 rounded-full bg-accent-maroon dark:bg-accent-blood text-white flex items-center justify-center mb-6">
         <Mail size={32} />
       </div>
@@ -84,7 +102,8 @@ export function NewsletterForm({
         Get Kyrvyn Insights
       </h2>
       <p className="text-slate-700 dark:text-slate-300 mb-8 max-w-lg">
-        Practical guidance on digital transformation, modern web platforms, and secure integrations. Opt out anytime.
+        Practical guidance on digital transformation, modern web platforms, and secure integrations.
+        Opt out anytime.
       </p>
       <form className="w-full max-w-md flex flex-col sm:flex-row gap-3" onSubmit={onSubmit}>
         <input
@@ -102,12 +121,12 @@ export function NewsletterForm({
       </form>
       {status === "success" && (
         <div className="mt-4 text-sm text-emerald-600 dark:text-emerald-400">
-          Subscription received.
+          Subscription request prepared.
         </div>
       )}
       {status === "error" && (
         <div className="mt-4 text-sm text-red-600 dark:text-red-400">
-          Failed to subscribe. Try again.
+          Unable to subscribe. Try again.
         </div>
       )}
     </GlassCard>

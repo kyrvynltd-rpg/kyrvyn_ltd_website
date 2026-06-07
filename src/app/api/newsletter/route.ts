@@ -44,7 +44,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, message: "Invalid JSON." }, { status: 400 });
   }
 
-  if (body.website) return NextResponse.json({ ok: false, message: "Invalid request." }, { status: 400 });
+  if (body.website)
+    return NextResponse.json({ ok: false, message: "Invalid request." }, { status: 400 });
   if (!body.email || !body.email.includes("@")) {
     return NextResponse.json({ ok: false, message: "Email is required." }, { status: 400 });
   }

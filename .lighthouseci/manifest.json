@@ -2,48 +2,48 @@
   {
     "url": "http://localhost:3000/",
     "isRepresentativeRun": true,
-    "htmlPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_-2026_06_06_21_15_27.report.html",
-    "jsonPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_-2026_06_06_21_15_27.report.json",
+    "htmlPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_-2026_06_07_20_04_17.report.html",
+    "jsonPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_-2026_06_07_20_04_17.report.json",
     "summary": {
-      "performance": 0.97,
+      "performance": 1,
       "accessibility": 0.95,
-      "best-practices": 0.96,
+      "best-practices": 1,
       "seo": 1
     }
   },
   {
     "url": "http://localhost:3000/projects",
     "isRepresentativeRun": true,
-    "htmlPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_projects-2026_06_06_21_15_40.report.html",
-    "jsonPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_projects-2026_06_06_21_15_40.report.json",
+    "htmlPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_projects-2026_06_07_20_04_34.report.html",
+    "jsonPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_projects-2026_06_07_20_04_34.report.json",
     "summary": {
-      "performance": 0.99,
+      "performance": 1,
       "accessibility": 0.96,
-      "best-practices": 0.96,
+      "best-practices": 1,
       "seo": 1
     }
   },
   {
     "url": "http://localhost:3000/projects/enterprise-web-platform-modernization",
     "isRepresentativeRun": true,
-    "htmlPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_projects_enterprise_web_platform_modernization-2026_06_06_21_15_53.report.html",
-    "jsonPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_projects_enterprise_web_platform_modernization-2026_06_06_21_15_53.report.json",
+    "htmlPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_projects_enterprise_web_platform_modernization-2026_06_07_20_04_51.report.html",
+    "jsonPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_projects_enterprise_web_platform_modernization-2026_06_07_20_04_51.report.json",
     "summary": {
-      "performance": 0.98,
+      "performance": 1,
       "accessibility": 0.96,
-      "best-practices": 0.96,
+      "best-practices": 1,
       "seo": 1
     }
   },
   {
     "url": "http://localhost:3000/contact",
     "isRepresentativeRun": true,
-    "htmlPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_contact-2026_06_06_21_16_05.report.html",
-    "jsonPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_contact-2026_06_06_21_16_05.report.json",
+    "htmlPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_contact-2026_06_07_20_05_05.report.html",
+    "jsonPath": "C:\\Users\\Gabriele\\Documents\\Gabriele\\Kyrvyn Ltd\\website\\Kyrvyn_Ltd\\.lighthouseci\\localhost-_contact-2026_06_07_20_05_05.report.json",
     "summary": {
-      "performance": 0.98,
+      "performance": 1,
       "accessibility": 0.94,
-      "best-practices": 0.96,
+      "best-practices": 1,
       "seo": 1
     }
   }

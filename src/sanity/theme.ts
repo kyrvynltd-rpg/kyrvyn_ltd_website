@@ -32,5 +32,5 @@ export const theme = buildLegacyTheme({
   "--main-navigation-color--inverted": "#FFFFFF",
 
   /* Focus */
-  "--focus-color": "#3B82F6"
+  "--focus-color": "#3B82F6",
 });

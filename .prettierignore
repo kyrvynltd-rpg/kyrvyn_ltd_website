@@ -1,0 +1,10 @@
+.next
+out
+node_modules
+dist
+build
+coverage
+playwright-report
+test-results
+.lighthouseci
+supabase

@@ -107,12 +107,7 @@ export default function BackgroundBlocks() {
   }, [restartKey]);
 
   return (
-    <div
-      ref={containerRef}
-      aria-hidden
-      className="kyrvyn-blocks"
-      data-restart-key={restartKey}
-    >
+    <div ref={containerRef} aria-hidden className="kyrvyn-blocks" data-restart-key={restartKey}>
       {blocks.map((b) => (
         <div
           key={b.id}
@@ -133,4 +128,3 @@ export default function BackgroundBlocks() {
     </div>
   );
 }
-

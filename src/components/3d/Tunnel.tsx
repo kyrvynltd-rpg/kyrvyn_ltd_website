@@ -9,18 +9,18 @@ import { useScroll } from "framer-motion";
 export function Tunnel({ theme, isMobile }: { theme: string; isMobile?: boolean }) {
   const meshRef = useRef<THREE.InstancedMesh>(null);
   const count = isMobile ? 180 : 300;
-  
+
   const dummy = useMemo(() => new Object3D(), []);
-  
+
   const blockData = useMemo(() => {
     const data = [];
     for (let i = 0; i < count; i++) {
       const angle = Math.random() * Math.PI * 2;
-      const radius = 4 + Math.random() * 8; 
+      const radius = 4 + Math.random() * 8;
       data.push({
         x: Math.cos(angle) * radius,
         y: Math.sin(angle) * radius,
-        z: -Math.random() * 200, 
+        z: -Math.random() * 200,
         rx: Math.random() * Math.PI,
         ry: Math.random() * Math.PI,
         rz: Math.random() * Math.PI,
@@ -35,7 +35,7 @@ export function Tunnel({ theme, isMobile }: { theme: string; isMobile?: boolean 
   useEffect(() => {
     const colorHex = theme === "dark" ? "#3B82F6" : "#1E3A8A";
     targetColor.set(colorHex);
-    
+
     if (meshRef.current) {
       for (let i = 0; i < count; i++) {
         meshRef.current.setColorAt(i, targetColor);
@@ -57,7 +57,7 @@ export function Tunnel({ theme, isMobile }: { theme: string; isMobile?: boolean 
       block.ry += delta * 0.05;
 
       if (block.z > state.camera.position.z + 10) {
-        block.z -= 200; 
+        block.z -= 200;
       }
 
       dummy.position.set(block.x, block.y, block.z);

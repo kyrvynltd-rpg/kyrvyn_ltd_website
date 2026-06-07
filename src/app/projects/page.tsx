@@ -21,9 +21,7 @@ export default function Projects() {
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white leading-tight">
                   {cs.title}
                 </h3>
-                <p className="text-slate-700 dark:text-slate-400">
-                  {cs.subtitle}
-                </p>
+                <p className="text-slate-700 dark:text-slate-400">{cs.subtitle}</p>
               </div>
               <Badge variant="info">{cs.industry}</Badge>
             </div>

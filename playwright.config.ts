@@ -11,7 +11,7 @@ export default defineConfig({
     trace: "on-first-retry",
   },
   webServer: {
-    command: "npm run start -- -p 3000",
+    command: "npx --yes serve@latest out -l 3000",
     url: "http://localhost:3000",
     reuseExistingServer: !isCI,
     timeout: 120_000,
@@ -22,4 +22,3 @@ export default defineConfig({
     { name: "webkit", use: { ...devices["Desktop Safari"] } },
   ],
 });
-

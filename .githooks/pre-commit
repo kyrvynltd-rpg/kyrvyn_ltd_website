@@ -24,7 +24,10 @@ fi
 
 if [ "$NEEDS_NODE_CHECKS" -eq 1 ]; then
   if command -v npm >/dev/null 2>&1; then
-    (cd "$REPO_ROOT" && npm run lint)
+    (cd "$REPO_ROOT" && npx lint-staged)
+    if echo "$STAGED_FILES" | grep -Eiq '\.(ts|tsx)$'; then
+      (cd "$REPO_ROOT" && npm run typecheck)
+    fi
   else
     echo "npm not found; cannot run lint."
     exit 1

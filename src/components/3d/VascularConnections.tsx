@@ -9,11 +9,7 @@ export function VascularConnections({ theme }: { theme: string }) {
       const points = [];
       for (let i = 0; i < 12; i++) {
         points.push(
-          new THREE.Vector3(
-            (Math.random() - 0.5) * 15,
-            (Math.random() - 0.5) * 15,
-            -i * 20
-          )
+          new THREE.Vector3((Math.random() - 0.5) * 15, (Math.random() - 0.5) * 15, -i * 20),
         );
       }
       return new THREE.CatmullRomCurve3(points);
@@ -21,15 +17,19 @@ export function VascularConnections({ theme }: { theme: string }) {
   }, []);
 
   const color = useMemo(() => new THREE.Color(), []);
-  const uniformsList = useMemo(() => curves.map(() => ({
-      uTime: { value: 0 },
-      uColor: { value: new THREE.Color() },
-  })), [curves]);
+  const uniformsList = useMemo(
+    () =>
+      curves.map(() => ({
+        uTime: { value: 0 },
+        uColor: { value: new THREE.Color() },
+      })),
+    [curves],
+  );
 
   useFrame((state) => {
     const colorHex = theme === "dark" ? "#00D4FF" : "#1E3A8A";
     color.set(colorHex);
-    
+
     uniformsList.forEach((uniforms) => {
       uniforms.uTime.value = state.clock.elapsedTime;
       uniforms.uColor.value.copy(color);

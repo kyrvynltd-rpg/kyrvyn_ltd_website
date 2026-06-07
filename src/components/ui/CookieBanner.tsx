@@ -35,9 +35,14 @@ export function CookieBanner() {
         >
           <div className="w-full max-w-5xl backdrop-blur-2xl bg-white/75 dark:bg-[#050505]/85 border border-black/10 dark:border-white/10 rounded-2xl p-6 shadow-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="flex flex-col gap-2 w-full md:w-2/3">
-              <h3 className="text-lg font-bold text-black dark:text-white">Cookies and Data Governance</h3>
+              <h3 className="text-lg font-bold text-black dark:text-white">
+                Cookies and Data Governance
+              </h3>
               <p className="text-sm text-cool-grey dark:text-gray-300">
-                We utilize essential cookies to guarantee core platform functionality and infrastructural security. With your authorization, we deploy supplementary tracking mechanisms to optimize performance analytics. All data is processed in strict compliance with the UK GDPR framework.
+                We utilize essential cookies to guarantee core platform functionality and
+                infrastructural security. With your authorization, we deploy supplementary tracking
+                mechanisms to optimize performance analytics. All data is processed in strict
+                compliance with the UK GDPR framework.
               </p>
             </div>
             <div className="flex gap-3 w-full md:w-auto shrink-0 justify-end flex-wrap">

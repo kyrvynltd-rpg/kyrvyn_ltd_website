@@ -25,16 +25,17 @@ export const metadata: Metadata = {
   title: "Kyrvyn Ltd",
   description:
     "Kyrvyn Ltd empowers businesses to build, expand, and optimize their digital footprint through tailored web engineering, secure integrations, and modern blockchain solutions.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning className="dark">
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-background text-cool-grey dark:text-gray-300 transition-colors duration-300 min-h-screen flex flex-col`}>
+      <body
+        className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-background text-cool-grey dark:text-gray-300 transition-colors duration-300 min-h-screen flex flex-col`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

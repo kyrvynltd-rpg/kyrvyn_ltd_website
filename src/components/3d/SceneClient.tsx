@@ -6,14 +6,16 @@ import { useEffect, useState } from "react";
 const Scene = dynamic(() => import("./Scene"), { ssr: false });
 
 export default function SceneClient() {
+  const isEnabledByEnv = process.env.NEXT_PUBLIC_ENABLE_3D === "1";
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
+    if (!isEnabledByEnv) return;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const mobile = window.matchMedia("(max-width: 768px)").matches;
     const saveData =
-      (navigator as unknown as { connection?: { saveData?: boolean } }).connection
-        ?.saveData === true;
+      (navigator as unknown as { connection?: { saveData?: boolean } }).connection?.saveData ===
+      true;
 
     if (reducedMotion || mobile || saveData) return;
 
@@ -29,17 +31,21 @@ export default function SceneClient() {
       return () => window.clearTimeout(fallback);
     }
 
-    const idleId = w.requestIdleCallback(() => {
-      window.clearTimeout(fallback);
-      enable();
-    }, { timeout: 2000 });
+    const idleId = w.requestIdleCallback(
+      () => {
+        window.clearTimeout(fallback);
+        enable();
+      },
+      { timeout: 2000 },
+    );
 
     return () => {
       window.clearTimeout(fallback);
       w.cancelIdleCallback?.(idleId);
     };
-  }, []);
+  }, [isEnabledByEnv]);
 
+  if (!isEnabledByEnv) return null;
   if (!enabled) return null;
   return <Scene />;
 }
