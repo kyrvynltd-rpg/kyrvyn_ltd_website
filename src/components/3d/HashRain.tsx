@@ -7,7 +7,7 @@ import { useScroll } from "framer-motion";
 export function HashRain({ theme, isMobile }: { theme: string; isMobile?: boolean }) {
   const meshRef = useRef<THREE.InstancedMesh>(null);
   const { scrollY } = useScroll();
-  const count = 150;
+  const count = isMobile ? 80 : 150;
 
   const texture = useMemo(() => {
     const canvas = document.createElement("canvas");

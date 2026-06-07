@@ -1,10 +1,16 @@
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  outputFileTracingRoot: __dirname,
   compiler: {
     styledComponents: true,
   },
-  // Ensuring peer-dependency resolution for Sanity Studio inside App Router
-  serverExternalPackages: ['sanity', 'next-sanity'],
+  serverExternalPackages: ["sanity", "next-sanity"],
 };
 
 export default nextConfig;

@@ -1,10 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const reducedMotion = useReducedMotion();
   
   if (pathname?.startsWith("/admin")) {
     return <>{children}</>;
@@ -12,9 +13,11 @@ export default function Template({ children }: { children: React.ReactNode }) {
 
   return (
     <motion.div
-      initial={{ y: 20, opacity: 0, filter: "blur(5px)" }}
+      key={pathname}
+      initial={reducedMotion ? { opacity: 1 } : { y: 10, opacity: 0, filter: "blur(6px)" }}
       animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-      transition={{ ease: "easeOut", duration: 0.6 }}
+      exit={reducedMotion ? { opacity: 0 } : { y: 10, opacity: 0, filter: "blur(6px)" }}
+      transition={{ ease: "easeOut", duration: 0.35 }}
       className="w-full h-full"
     >
       {children}

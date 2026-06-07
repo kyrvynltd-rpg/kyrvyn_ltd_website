@@ -11,8 +11,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-        serif: ["Playfair Display", ...defaultTheme.fontFamily.serif],
+        sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
+        serif: ["var(--font-serif)", ...defaultTheme.fontFamily.serif],
       },
       colors: {
         background: "var(--background)",
@@ -21,6 +21,22 @@ const config: Config = {
         "cool-grey": "var(--cool-grey)",
         "pure-black": "var(--pure-black)",
       },
+      typography: ({ theme }: { theme: (path: string) => string }) => ({
+        DEFAULT: {
+          css: {
+            "--tw-prose-links": theme("colors.accent-maroon"),
+            "--tw-prose-headings": theme("colors.slate.900"),
+            a: { fontWeight: "600", textDecoration: "none" },
+            "a:hover": { textDecoration: "underline" },
+          },
+        },
+        invert: {
+          css: {
+            "--tw-prose-links": theme("colors.accent-blood"),
+            "--tw-prose-headings": theme("colors.white"),
+          },
+        },
+      }),
     },
   },
   plugins: [

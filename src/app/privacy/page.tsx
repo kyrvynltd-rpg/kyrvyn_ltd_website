@@ -7,12 +7,12 @@ export default function PrivacyPolicy() {
         <div className="prose prose-lg dark:prose-invert max-w-none">
           <h1 className="text-4xl md:text-5xl font-bold mb-8 text-slate-900 dark:text-white">Privacy Policy</h1>
           <p className="text-slate-900 dark:text-slate-400 font-medium border-b border-black/10 dark:border-white/10 pb-4 mb-8">
-            Effective Date: November 12, 2026
+            Effective Date: June 6, 2026
           </p>
           
           <h2 className="text-slate-900 dark:text-white text-2xl font-semibold mt-8 mb-4">1. GDPR Data Handling Practices</h2>
           <p className="text-slate-900 dark:text-slate-400 leading-relaxed mb-6">
-            Decima Minus Ltd collects corporate contact details submitted through Contact Operations and newsletter forms. Data is stored on UK-based servers and used only to respond to inquiries and provide requested updates.
+            Kyrvyn Ltd collects contact details submitted through the contact form and newsletter forms. Data is stored on UK-based servers and used only to respond to inquiries and provide requested updates.
           </p>
           
           <h2 id="cookies" className="text-slate-900 dark:text-white text-2xl font-semibold mt-8 mb-4">2. Cookie & Tracker Policy</h2>
@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
 
           <h2 id="ccpa" className="text-slate-900 dark:text-white text-2xl font-semibold mt-8 mb-4">3. CCPA Disclosures & Rights</h2>
           <p className="text-slate-900 dark:text-slate-400 leading-relaxed mb-6">
-            Decima Minus Ltd does not sell or share personal information. California residents may request access or deletion of personal data by contacting decimaminus@gmail.com.
+            Kyrvyn Ltd does not sell or share personal information. California residents may request access or deletion of personal data by submitting a request via the contact form.
           </p>
         </div>
       </GlassCard>

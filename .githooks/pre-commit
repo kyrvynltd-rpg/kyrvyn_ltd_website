@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+
+STAGED_FILES="$(git diff --cached --name-only --diff-filter=ACM || true)"
+
+BLOCKED_PATTERNS='(^|/)\.env($|\.)|(^|/).*\.pem$|(^|/).*\.p12$|(^|/).*\.pfx$|(^|/).*id_rsa$|(^|/).*id_ed25519$'
+if echo "$STAGED_FILES" | grep -Eiq "$BLOCKED_PATTERNS"; then
+  echo "Blocked: attempting to commit a sensitive file (.env/private key)."
+  exit 1
+fi
+
+if command -v gitleaks >/dev/null 2>&1; then
+  gitleaks protect --staged --redact --no-banner
+else
+  echo "gitleaks not installed. Install it for secret scanning (recommended)."
+fi
+
+NEEDS_NODE_CHECKS=0
+if echo "$STAGED_FILES" | grep -Eiq '\.(js|jsx|ts|tsx|json|css|scss|md)$'; then
+  NEEDS_NODE_CHECKS=1
+fi
+
+if [ "$NEEDS_NODE_CHECKS" -eq 1 ]; then
+  if command -v npm >/dev/null 2>&1; then
+    (cd "$REPO_ROOT" && npm run lint)
+  else
+    echo "npm not found; cannot run lint."
+    exit 1
+  fi
+fi

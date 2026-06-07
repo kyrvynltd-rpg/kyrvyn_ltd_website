@@ -8,7 +8,7 @@ import { useScroll } from "framer-motion";
 
 export function Tunnel({ theme, isMobile }: { theme: string; isMobile?: boolean }) {
   const meshRef = useRef<THREE.InstancedMesh>(null);
-  const count = 300;
+  const count = isMobile ? 180 : 300;
   
   const dummy = useMemo(() => new Object3D(), []);
   

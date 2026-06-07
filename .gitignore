@@ -5,3 +5,8 @@ out
 .vercel
 .env
 .env.*
+.vs/
+test-results/
+playwright-report/
+debug.log
+*.log

@@ -21,8 +21,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   if (!post) {
     return (
       <div className="py-24 max-w-3xl mx-auto px-4 text-center relative z-10">
-        <h1 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">404 - Document Destroyed</h1>
-        <Link href="/blog" className="text-accent-maroon hover:underline">Abort and return to Research Hub</Link>
+        <h1 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">Page not found</h1>
+        <Link href="/blog" className="text-accent-maroon hover:underline">Return to Insights</Link>
       </div>
     );
   }
@@ -30,7 +30,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   return (
     <div className="py-12 max-w-4xl mx-auto px-4 z-10 relative">
       <Link href="/blog" className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white mb-8 transition-colors font-medium">
-        <ArrowLeft size={16} /> Operations Console
+        <ArrowLeft size={16} /> Back to Insights
       </Link>
       
       <GlassCard className="p-8 md:p-12 shadow-2xl">
@@ -46,14 +46,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               <div className="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-white/20 shadow-inner" />
               <div>
                 <p className="text-sm font-bold text-slate-900 dark:text-white">{post.authorName}</p>
-                <p className="text-xs font-semibold tracking-wider text-slate-500 uppercase">Core Protocol Engineer</p>
+                <p className="text-xs font-semibold tracking-wider text-slate-500 uppercase">Engineering</p>
               </div>
             </div>
           )}
         </header>
 
-        <div className="prose prose-lg dark:prose-invert prose-blue max-w-none prose-headings:font-serif prose-p:text-slate-700 dark:prose-p:text-slate-300 prose-a:text-accent-maroon dark:prose-a:text-accent-blood leading-loose">
-          {post.body ? <PortableText value={post.body} /> : <p>Encrypted block payload empty.</p>}
+        <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-serif prose-p:text-slate-700 dark:prose-p:text-slate-300 leading-loose">
+          {post.body ? <PortableText value={post.body} /> : <p>Content is not available.</p>}
         </div>
       </GlassCard>
     </div>

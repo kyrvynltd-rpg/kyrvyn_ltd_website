@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { Menu, X } from "lucide-react";
@@ -12,40 +11,50 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/projects", label: "Projects" },
-  { href: "/blog", label: "Research & Operations" },
-  { href: "/contact", label: "Contact Operations" },
+  { href: "/blog", label: "Insights" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-
-  if (pathname?.startsWith("/admin")) return null;
+  const isAdmin = pathname?.startsWith("/admin");
 
   useEffect(() => {
+    if (isAdmin) return;
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
     }
     return () => { document.body.style.overflow = "unset"; };
-  }, [isOpen]);
+  }, [isOpen, isAdmin]);
 
   useEffect(() => {
+    if (isAdmin) return;
     setIsOpen(false);
-  }, [pathname]);
+  }, [pathname, isAdmin]);
+
+  useEffect(() => {
+    if (isAdmin) return;
+    if (!isOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isOpen, isAdmin]);
+
+  if (isAdmin) return null;
 
   return (
     <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/70 dark:bg-slate-900/50 border-b border-slate-200 dark:border-white/10 transition-colors duration-300">
       <div className="max-w-7xl mx-auto py-4 px-8 flex items-center justify-between relative z-[60]">
-        <Link href="/" className="flex items-center">
-          <Image 
-            src="/images/logo1.png" 
-            alt="Logo" 
-            width={40} 
-            height={40}
-            className="h-10 w-auto"
-          />
+        <Link
+          href="/"
+          className="flex items-center font-black tracking-tight text-slate-900 dark:text-white"
+        >
+          Kyrvyn Ltd
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {links.map((link) => (
@@ -68,6 +77,8 @@ export default function Header() {
             className="md:hidden p-2 -mr-2 text-slate-900 dark:text-white hover:text-accent-maroon transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Navigation Menu"
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -81,7 +92,10 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-0 z-50 flex flex-col items-center justify-center backdrop-blur-3xl bg-white/95 dark:bg-[#050505]/95 min-h-screen w-full"
+            id="mobile-nav"
+            role="dialog"
+            aria-modal="true"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center backdrop-blur-3xl bg-white/85 dark:bg-[#050505]/85 min-h-screen w-full"
           >
             <nav className="flex flex-col items-center gap-8">
               {links.map((link) => (

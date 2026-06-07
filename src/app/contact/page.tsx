@@ -1,24 +1,71 @@
-import { Github, Twitter, Linkedin, Send } from "lucide-react";
+"use client";
+
+import { Github, Send } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { Button } from "@/components/ui/Button";
+import { useState, type FormEvent } from "react";
 
 export default function Contact() {
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [error, setError] = useState<string>("");
+
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("loading");
+    setError("");
+
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const payload = {
+      name: String(fd.get("name") || ""),
+      email: String(fd.get("email") || ""),
+      message: String(fd.get("message") || ""),
+      consent: fd.get("gdpr-consent") === "on",
+      website: String(fd.get("website") || ""),
+    };
+
+    try {
+      const r = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = (await r.json().catch(() => ({}))) as { message?: string };
+      if (!r.ok) throw new Error(data.message || "Request failed");
+      setStatus("success");
+      form.reset();
+      (window as unknown as { plausible?: (event: string) => void }).plausible?.("Contact Submit");
+    } catch (err) {
+      setStatus("error");
+      setError(err instanceof Error ? err.message : "Request failed");
+    }
+  }
+
   return (
     <div className="py-12 max-w-2xl mx-auto">
       <GlassCard className="p-8 mb-12 shadow-xl text-center md:text-left">
-        <h1 className="text-5xl font-bold mb-4 text-slate-900 dark:text-white">Contact Operations</h1>
+        <h1 className="text-5xl font-bold mb-4 text-slate-900 dark:text-white">Contact</h1>
         <p className="text-slate-900 dark:text-slate-400">
-          For corporate inquiries and infrastructure partnerships, please submit a secure request.
+          Share your goals and context. We’ll respond with next steps to help you build, expand, or optimize your digital footprint.
         </p>
       </GlassCard>
 
       {/* Minimal Contact Form */}
       <GlassCard className="p-8 group shadow-2xl">
-        <form className="flex flex-col gap-6">
-        <div className="flex flex-col gap-2">
-          <label htmlFor="name" className="text-sm font-medium">Representative Name</label>
-          <input 
+        <form className="flex flex-col gap-6" onSubmit={onSubmit}>
+          <input
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            className="hidden"
+          />
+          <div className="flex flex-col gap-2">
+            <label htmlFor="name" className="text-sm font-medium">Representative Name</label>
+            <input 
             type="text" 
-            id="name" 
+            id="name"
+            name="name"
             required
             minLength={2}
             aria-label="Representative Name"
@@ -26,70 +73,78 @@ export default function Contact() {
             placeholder="Corporate Representative"
           />
           <span className="text-xs text-red-500 hidden peer-invalid:[&:not(:placeholder-shown)]:block">Please enter a valid representative name.</span>
-        </div>
+          </div>
         
-        <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="text-sm font-medium">Corporate Email</label>
-          <input 
+          <div className="flex flex-col gap-2">
+            <label htmlFor="email" className="text-sm font-medium">Corporate Email</label>
+            <input 
             type="email" 
-            id="email" 
+            id="email"
+            name="email"
             required
             aria-label="Corporate Email"
             className="w-full bg-white/80 dark:bg-black/80 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 outline-none focus:border-accent-maroon dark:focus:border-accent-blood transition-colors invalid:[&:not(:placeholder-shown)]:border-red-500 valid:[&:not(:placeholder-shown)]:border-green-500 peer"
-            placeholder="decimaminus@gmail.com"
+            placeholder="name@company.com"
           />
           <span className="text-xs text-red-500 hidden peer-invalid:[&:not(:placeholder-shown)]:block">Please provide a valid corporate email address.</span>
-        </div>
+          </div>
 
-        <div className="flex flex-col gap-2">
-          <label htmlFor="message" className="text-sm font-medium">Inquiry Details</label>
-          <textarea 
-            id="message" 
+          <div className="flex flex-col gap-2">
+            <label htmlFor="message" className="text-sm font-medium">Inquiry Details</label>
+            <textarea 
+            id="message"
+            name="message"
             rows={5}
             required
             minLength={10}
             aria-label="Inquiry Details"
             className="w-full bg-white/80 dark:bg-black/80 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 outline-none focus:border-accent-maroon dark:focus:border-accent-blood transition-colors resize-none invalid:[&:not(:placeholder-shown)]:border-red-500 valid:[&:not(:placeholder-shown)]:border-green-500 peer"
-            placeholder="Detail your institutional requirements or integration needs."
+            placeholder="Tell us what you’re building, what success looks like, and any constraints or deadlines."
           />
           <span className="text-xs text-red-500 hidden peer-invalid:[&:not(:placeholder-shown)]:block">Your inquiry must be at least 10 characters long.</span>
-        </div>
+          </div>
 
         {/* GDPR Opt-In */}
         <div className="flex items-start gap-3 mt-2">
           <input 
             type="checkbox" 
             id="gdpr-consent" 
+            name="gdpr-consent"
             required 
             className="mt-1 w-4 h-4 cursor-pointer accent-accent-maroon dark:accent-accent-blood peer" 
           />
           <label htmlFor="gdpr-consent" className="text-sm text-cool-grey dark:text-gray-400 select-none">
-            I explicitly consent to the processing of my corporate data in accordance with the UK GDPR framework and Decima Minus Ltd's <a href="/privacy-policy" className="text-accent-maroon dark:text-accent-blood hover:underline font-semibold">Data Privacy Policy</a>. I authorize the retention of these records for infrastructural communications.
+            I consent to the processing of my contact data in accordance with the UK GDPR and Kyrvyn Ltd&apos;s <a href="/privacy-policy" className="text-accent-maroon dark:text-accent-blood hover:underline font-semibold">Data Privacy Policy</a>.
           </label>
         </div>
 
-        <button 
-          type="submit" 
-          className="bg-accent-maroon dark:bg-accent-blood text-white rounded-xl px-6 py-4 font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-opacity mt-2 group-invalid:opacity-50 group-invalid:pointer-events-none"
-        >
-          Submit Inquiry <Send size={18} />
-        </button>
+          <Button type="submit" className="mt-2 w-full" disabled={status === "loading"}>
+            {status === "loading" ? "Submitting..." : "Submit Inquiry"} <Send size={18} />
+          </Button>
+
+          {status === "success" && (
+            <div className="text-sm text-emerald-600 dark:text-emerald-400">
+              Inquiry received. We’ll respond via email.
+            </div>
+          )}
+          {status === "error" && (
+            <div className="text-sm text-red-600 dark:text-red-400">
+              {error || "Submission failed. Please try again."}
+            </div>
+          )}
         </form>
       </GlassCard>
 
       {/* Social Links */}
       <div className="mt-16 flex items-center justify-center gap-8">
-        <a href="#" className="text-cool-grey hover:text-accent-maroon dark:hover:text-accent-blood transition-colors">
-          <Twitter size={24} />
-          <span className="sr-only">Twitter</span>
-        </a>
-        <a href="#" className="text-cool-grey hover:text-accent-maroon dark:hover:text-accent-blood transition-colors">
+        <a
+          href="https://github.com/GIL794/kyrvynltd"
+          className="text-cool-grey hover:text-accent-maroon dark:hover:text-accent-blood transition-colors"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Github size={24} />
           <span className="sr-only">GitHub</span>
-        </a>
-        <a href="#" className="text-cool-grey hover:text-accent-maroon dark:hover:text-accent-blood transition-colors">
-          <Linkedin size={24} />
-          <span className="sr-only">LinkedIn</span>
         </a>
       </div>
     </div>

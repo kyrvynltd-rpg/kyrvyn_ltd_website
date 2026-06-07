@@ -28,7 +28,7 @@ export function MempoolParticles({ theme }: { theme: string }) {
   useFrame((state) => {
     if (!pointsRef.current) return;
     const posAttr = pointsRef.current.geometry.attributes.position;
-    const scrollOffset = scrollY.get() * 0.05;
+    scrollY.get();
 
     // Convert mouse position to 3D world space loosely around Z = -15
     const zDepth = state.camera.position.z - 15;
@@ -42,9 +42,9 @@ export function MempoolParticles({ theme }: { theme: string }) {
         const pd = particleData[i];
         
         // Compute active position incorporating continuous drift
-        let px = pd.baseX;
-        let py = pd.baseY;
-        let pz = pd.baseZ;
+        const px = pd.baseX;
+        const py = pd.baseY;
+        const pz = pd.baseZ;
 
         // Apply mouse repulsion
         const dx = px - pointerVec.x;
