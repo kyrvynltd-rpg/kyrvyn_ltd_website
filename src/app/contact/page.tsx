@@ -1,12 +1,11 @@
 "use client";
 
-import { GitHub, Send } from "lucide-react";
+import { GithubIcon, Send } from "@/components/icons";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
-import { GlassCard } from "@/components/ui/GlassCard";
-import { Github, Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
+
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -187,7 +186,7 @@ export default function Contact() {
           target="_blank"
           rel="noreferrer"
         >
-          <Github size={24} />
+          <FaGithub className="h-5 w-5" />
           <span className="sr-only">GitHub</span>
         </a>
       </div>
