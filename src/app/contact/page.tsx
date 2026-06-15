@@ -1,8 +1,8 @@
 "use client";
 
-import { Github, Send } from "lucide-react";
-import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
+import { GlassCard } from "@/components/ui/GlassCard";
+import { Github, Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
 
 export default function Contact() {
@@ -176,7 +176,7 @@ export default function Contact() {
       {/* Social Links */}
       <div className="mt-16 flex items-center justify-center gap-8">
         <a
-          href="https://github.com/GIL794/kyrvynltd"
+          href="https://github.com/kyrvynltd-rpg/"
           className="text-cool-grey hover:text-accent-maroon dark:hover:text-accent-blood transition-colors"
           target="_blank"
           rel="noreferrer"
