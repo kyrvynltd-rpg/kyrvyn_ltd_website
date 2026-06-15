@@ -24,7 +24,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Kyrvyn Ltd",
   description:
-    "Kyrvyn Ltd empowers businesses to build, expand, and optimize their digital footprint through tailored web engineering, secure integrations, and modern blockchain solutions.",
+    "Kyrvyn Ltd provides bespoke website development, technical consulting and architecture, and custom development for integrations, blockchain solutions, performance improvements, UX upgrades, and platform modernisation.",
   icons: {
     icon: "/icon.svg",
   },
