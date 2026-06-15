@@ -99,10 +99,10 @@ export function NewsletterForm({
         <Mail size={32} />
       </div>
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
-        Get Kyrvyn Insights
+        Get Kyrvyn Updates
       </h2>
       <p className="text-slate-700 dark:text-slate-300 mb-8 max-w-lg">
-        Practical guidance on digital transformation, modern web platforms, and secure integrations.
+        Occasional updates on bespoke websites, technical consulting, and custom development.
         Opt out anytime.
       </p>
       <form className="w-full max-w-md flex flex-col sm:flex-row gap-3" onSubmit={onSubmit}>

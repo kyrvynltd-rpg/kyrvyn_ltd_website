@@ -53,8 +53,8 @@ export default async function Blog() {
             Insights
           </h1>
           <p className="text-slate-900 dark:text-slate-400">
-            Digital transformation guidance, engineering playbooks, and practical notes on building
-            resilient platforms.
+            Articles, notes, and practical guidance on bespoke websites, technical consulting, and
+            custom development.
           </p>
         </GlassCard>
 

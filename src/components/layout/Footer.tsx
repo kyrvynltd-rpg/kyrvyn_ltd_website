@@ -17,12 +17,13 @@ export default function Footer() {
             Kyrvyn Ltd
           </span>
           <span className="text-sm text-slate-600 dark:text-slate-400">
-            Forward-thinking technology partner for digital transformation.
+            Bespoke website development, technical consulting, and custom software delivery.
           </span>
           <div className="flex flex-col gap-1 mt-2 text-sm">
             <span>Registered in England and Wales.</span>
             <span>
-              Business Focus: Digital transformation, web engineering, and secure integrations.
+              Business Focus: Bespoke websites, technical consulting, secure integrations, and
+              platform modernisation.
             </span>
             <span>Company Registration Number: 17078769</span>
           </div>

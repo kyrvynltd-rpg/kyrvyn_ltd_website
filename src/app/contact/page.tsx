@@ -1,15 +1,20 @@
 "use client";
 
+import { GitHub, Send } from "lucide-react";
+import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Github, Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [error, setError] = useState<string>("");
   const isStaticExport = process.env.NEXT_PUBLIC_STATIC_EXPORT === "1";
   const contactEmail = (process.env.NEXT_PUBLIC_CONTACT_EMAIL || "").trim();
+  const searchParams = useSearchParams();
+  const brief = (searchParams.get("brief") || "").trim();
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -66,8 +71,8 @@ export default function Contact() {
       <GlassCard className="p-8 mb-12 shadow-xl text-center md:text-left">
         <h1 className="text-5xl font-bold mb-4 text-slate-900 dark:text-white">Contact</h1>
         <p className="text-slate-900 dark:text-slate-400">
-          Share your goals and context. We’ll respond with next steps to help you build, expand, or
-          optimize your digital footprint.
+          Tell us whether you need a bespoke website, technical consulting, or custom development.
+          We’ll respond with next steps, scope guidance, and a practical route forward.
         </p>
       </GlassCard>
 
@@ -125,6 +130,7 @@ export default function Contact() {
               aria-label="Inquiry Details"
               className="w-full bg-white/80 dark:bg-black/80 border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 outline-none focus:border-accent-maroon dark:focus:border-accent-blood transition-colors resize-none invalid:[&:not(:placeholder-shown)]:border-red-500 valid:[&:not(:placeholder-shown)]:border-green-500 peer"
               placeholder="Tell us what you’re building, what success looks like, and any constraints or deadlines."
+              defaultValue={brief || undefined}
             />
             <span className="text-xs text-red-500 hidden peer-invalid:[&:not(:placeholder-shown)]:block">
               Your inquiry must be at least 10 characters long.
