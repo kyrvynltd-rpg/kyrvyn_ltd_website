@@ -16,7 +16,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Enterprise Web Platform Modernization",
     subtitle: "Performance, accessibility, and UX uplift for a complex web application.",
     industry: "Enterprise SaaS",
-    services: ["Web Development", "UX Engineering", "Performance"],
+    services: ["Bespoke Website Development", "Performance Improvements", "UX Upgrades"],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "CI Quality Gates"],
     outcomes: [
       "Improved Lighthouse scores through performance budgets and image optimization",
@@ -33,7 +33,11 @@ export const caseStudies: CaseStudy[] = [
     title: "Blockchain Protocol Integration Showcase",
     subtitle: "A trust-building demo experience focused on reliability and safety.",
     industry: "Blockchain",
-    services: ["Blockchain Development", "Security Engineering", "UX"],
+    services: [
+      "Custom Integrations",
+      "Blockchain Solutions",
+      "Technical Consulting & Architecture",
+    ],
     stack: ["React", "TypeScript", "API Design", "Observability"],
     outcomes: [
       "Clear demo flows with robust error states and security-first constraints",
@@ -50,7 +54,11 @@ export const caseStudies: CaseStudy[] = [
     title: "Content & Research Publishing Pipeline",
     subtitle: "Structured publishing with Sanity CMS and Next.js for rapid iteration.",
     industry: "Media / Research",
-    services: ["CMS Integration", "Frontend Engineering"],
+    services: [
+      "Technical Consulting & Architecture",
+      "Custom Development",
+      "Platform Modernisation",
+    ],
     stack: ["Sanity", "next-sanity", "GROQ", "Next.js App Router"],
     outcomes: [
       "Fast authoring workflow via Studio at /admin",

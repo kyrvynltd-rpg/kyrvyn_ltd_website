@@ -9,15 +9,15 @@ export default function About() {
         <GlassCard className="p-8 prose prose-lg dark:prose-invert max-w-none">
           <h2 className="text-accent-maroon dark:text-accent-blood mt-0">Our Mission</h2>
           <p className="text-slate-900 dark:text-slate-400">
-            Kyrvyn Ltd is a forward-thinking UK technology company dedicated to reshaping the global
-            digital landscape. We empower businesses to build, expand, and optimize their digital
-            footprint through tailored solutions that connect strategy, engineering, and measurable
-            outcomes.
+            Kyrvyn Ltd is a UK technology company focused on sellable, practical digital services
+            for modern businesses. We design and build bespoke websites, provide technical strategy
+            and architecture consulting, and deliver custom software for clients who need reliable,
+            well-executed digital delivery.
           </p>
           <p className="text-slate-900 dark:text-slate-400 mb-0">
-            Our work spans modern web platforms, secure integrations, and blockchain solutions where
-            they create genuine advantage. We focus on long-term maintainability, performance, and
-            trust so clients can modernize with confidence and scale with clarity.
+            Our work covers secure integrations, blockchain solutions, performance improvements, UX
+            upgrades, and platform modernisation. We focus on clear communication, maintainable
+            engineering, and outcomes that help clients launch, improve, and grow with confidence.
           </p>
         </GlassCard>
       </section>
@@ -41,12 +41,12 @@ export default function About() {
                   Gabriele Iacopo Langellotto
                 </h3>
                 <p className="text-accent-maroon dark:text-accent-blood font-semibold mb-4">
-                  Founder & Digital Transformation Architect
+                  Founder & Technical Consultant
                 </p>
                 <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                  Full-stack engineer focused on helping organizations ship resilient digital
-                  products, modernize legacy systems, and deliver measurable improvements across
-                  performance, reliability, and user experience.
+                  Full-stack engineer focused on bespoke website delivery, technical consulting, and
+                  custom development for clients who need practical solutions, resilient platforms,
+                  and strong user experience.
                 </p>
               </div>
             </div>
@@ -56,34 +56,34 @@ export default function About() {
         {/* Team Capabilities Highlight */}
         <GlassCard className="mt-12 p-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
           <h3 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">
-            How We Drive Digital Growth
+            What We Sell
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="flex flex-col">
               <div className="text-3xl font-bold text-accent-maroon dark:text-accent-blood mb-2">
-                Build
+                Bespoke Website Development
               </div>
               <p className="text-slate-700 dark:text-slate-300">
-                Design and engineer modern web platforms that elevate brand credibility, usability,
-                and conversion across devices.
+                We design and build bespoke websites that support your brand, user journeys,
+                conversion goals, and long-term growth.
               </p>
             </div>
             <div className="flex flex-col">
               <div className="text-3xl font-bold text-accent-maroon dark:text-accent-blood mb-2">
-                Expand
+                Technical Consulting & Architecture
               </div>
               <p className="text-slate-700 dark:text-slate-300">
-                Scale capabilities with secure integrations, automation, and data-driven features
-                that support business operations.
+                We provide technical strategy and architecture consulting for planning, platform
+                choices, delivery direction, and technical decision-making.
               </p>
             </div>
             <div className="flex flex-col">
               <div className="text-3xl font-bold text-accent-maroon dark:text-accent-blood mb-2">
-                Optimize
+                Custom Development
               </div>
               <p className="text-slate-700 dark:text-slate-300">
-                Improve performance, accessibility, reliability, and security to keep your digital
-                footprint competitive over time.
+                We deliver bespoke development for integrations, blockchain solutions, performance
+                improvements, UX upgrades, and platform modernisation.
               </p>
             </div>
           </div>

@@ -9,7 +9,7 @@ export default function Projects() {
     <div className="py-12">
       <SectionHeading
         title="Projects"
-        subtitle="Selected engagements and capability demonstrations covering enterprise web delivery, performance engineering, and blockchain integration workflows."
+        subtitle="Selected examples of bespoke website development, technical consulting, and custom development across integrations, blockchain, performance, UX, and platform modernisation."
       />
       <SectionDivider className="mt-8 mb-10" />
 
