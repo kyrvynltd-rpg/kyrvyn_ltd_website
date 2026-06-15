@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Send } from "lucide-react";
+import { GithubIcon, Send } from "@/components/icons";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
 import { useState, type FormEvent } from "react";
