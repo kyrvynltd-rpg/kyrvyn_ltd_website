@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { ArrowRight, CheckCircle2, Lock, Workflow, Database, ShieldCheck, Cpu } from "lucide-react";
+import { ArrowRight, CheckCircle2, Lock, Workflow, Database, Cpu } from "lucide-react";
 
 export default function CustomDevelopmentServicePage() {
   return (
@@ -137,7 +137,7 @@ export default function CustomDevelopmentServicePage() {
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl font-black mb-6 text-white">Ready to scale securely?</h2>
             <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Don't let outdated technology limit your business potential. Partner with us for reliable custom development and robust system modernization.
+              Don&apos;t let outdated technology limit your business potential. Partner with us for reliable custom development and robust system modernization.
             </p>
             <Link
               href="/contact"

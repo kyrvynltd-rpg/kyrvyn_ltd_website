@@ -186,7 +186,7 @@ export default function Contact() {
           target="_blank"
           rel="noreferrer"
         >
-          <FaGithub className="h-5 w-5" />
+          <GithubIcon className="h-5 w-5" />
           <span className="sr-only">GitHub</span>
         </a>
       </div>

@@ -77,7 +77,7 @@ export default function TechnicalConsultingServicePage() {
              </div>
              <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Technology Stack Selection</h3>
              <p className="text-slate-700 dark:text-slate-300 mb-6 flex-grow">
-               Don't chase trends. We help you choose the right tools, frameworks, and languages based on your team's expertise, time-to-market constraints, and long-term maintainability.
+               Don&apos;t chase trends. We help you choose the right tools, frameworks, and languages based on your team&apos;s expertise, time-to-market constraints, and long-term maintainability.
              </p>
              <ul className="space-y-3 text-slate-600 dark:text-slate-400 mb-8">
                <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-orange-500 flex-shrink-0 mt-0.5" /> <span>Unbiased framework comparisons</span></li>
@@ -137,7 +137,7 @@ export default function TechnicalConsultingServicePage() {
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl font-black mb-6 text-white">Need a clear technical direction?</h2>
             <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Stop letting technical uncertainty slow down your business. Let's build a roadmap that guarantees successful execution.
+              Stop letting technical uncertainty slow down your business. Let&apos;s build a roadmap that guarantees successful execution.
             </p>
             <Link
               href="/contact"

@@ -92,7 +92,7 @@ export default function WebsiteDevelopmentServicePage() {
                <Shield size={28} />
             </div>
             <h3 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">
-              The "Hands-Off" Track
+              The &quot;Hands-Off&quot; Track
             </h3>
             <div className="text-sm font-bold tracking-widest uppercase text-accent-maroon dark:text-accent-blood mb-4">
               Hardcoded (HTML/CSS/JS) + Maintenance
@@ -120,7 +120,7 @@ export default function WebsiteDevelopmentServicePage() {
                <Settings size={28} />
             </div>
             <h3 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">
-              The "Independence" Track
+              The &quot;Independence&quot; Track
             </h3>
             <div className="text-sm font-bold tracking-widest uppercase text-emerald-600 dark:text-emerald-400 mb-4">
               WordPress
@@ -150,7 +150,7 @@ export default function WebsiteDevelopmentServicePage() {
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl font-black mb-6 text-white">Ready to elevate your business?</h2>
             <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Whether you want complete independence or a hands-off experience, we have the perfect bespoke website solution for you. Let's get started today.
+              Whether you want complete independence or a hands-off experience, we have the perfect bespoke website solution for you. Let&apos;s get started today.
             </p>
             <Link
               href="/contact"

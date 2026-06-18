@@ -19,7 +19,6 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  serverExternalPackages: ["sanity", "next-sanity"],
 };
 
 export default nextConfig;
