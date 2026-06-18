@@ -39,7 +39,7 @@ export function HashRain({ theme, isMobile }: { theme: string; isMobile?: boolea
 
   useFrame((state) => {
     if (!meshRef.current) return;
-    const colorHex = theme === "dark" ? "#3B82F6" : "#64748B";
+    const colorHex = theme === "dark" ? "#3B82F6" : "#0F172A";
     targetColor.set(colorHex);
 
     const scrollOffset = scrollY.get() * 0.05;
@@ -73,7 +73,7 @@ export function HashRain({ theme, isMobile }: { theme: string; isMobile?: boolea
       <meshBasicMaterial
         map={texture}
         transparent
-        opacity={0.8}
+        opacity={theme === "dark" ? 0.95 : 0.8}
         depthWrite={false}
         color="#ffffff"
         blending={THREE.AdditiveBlending}

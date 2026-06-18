@@ -74,11 +74,11 @@ export function Tunnel({ theme, isMobile }: { theme: string; isMobile?: boolean 
       <boxGeometry args={[1.5, 1.5, 1.5]} />
       <meshPhysicalMaterial
         transparent
-        opacity={theme === "dark" ? 0.4 : 0.85}
+        opacity={theme === "dark" ? 0.75 : 0.95}
         roughness={0.1}
         metalness={0.5}
-        emissive={theme === "dark" ? "#00D4FF" : "#1E3A8A"}
-        emissiveIntensity={theme === "dark" ? 0.2 : 0.4}
+        emissive={theme === "dark" ? "#00D4FF" : "#0F172A"}
+        emissiveIntensity={theme === "dark" ? 0.5 : 0.8}
       />
     </instancedMesh>
   );

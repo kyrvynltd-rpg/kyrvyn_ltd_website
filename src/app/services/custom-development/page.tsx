@@ -115,7 +115,7 @@ export default function CustomDevelopmentServicePage() {
              </div>
              <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Security Audits & Performance Hardening</h3>
              <p className="text-slate-700 dark:text-slate-300 mb-6 flex-grow">
-               A successful platform is only as good as its speed and security. We conduct thorough security audits, implement advanced caching, optimize databases, and secure your platform against emerging enterprise-level threats.
+               A successful platform is only as good as its speed and security. We conduct thorough security audits, implement advanced caching, optimise databases, and secure your platform against emerging enterprise-level threats.
              </p>
              <ul className="space-y-3 text-slate-600 dark:text-slate-400 mb-8">
                <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-rose-500 flex-shrink-0 mt-0.5" /> <span>High-availability architecture design</span></li>
