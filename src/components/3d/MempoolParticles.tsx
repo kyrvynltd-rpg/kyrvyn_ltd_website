@@ -85,10 +85,10 @@ export function MempoolParticles({ theme }: { theme: string }) {
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
       <pointsMaterial
-        size={0.25}
-        color={theme === "dark" ? "#3B82F6" : "#1E3A8A"}
+        size={0.35}
+        color={theme === "dark" ? "#3B82F6" : "#0F172A"}
         transparent
-        opacity={0.8}
+        opacity={theme === "dark" ? 0.95 : 0.8}
         sizeAttenuation
         depthWrite={false}
         blending={THREE.AdditiveBlending}

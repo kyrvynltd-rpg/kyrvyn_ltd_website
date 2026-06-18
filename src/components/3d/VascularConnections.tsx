@@ -27,7 +27,7 @@ export function VascularConnections({ theme }: { theme: string }) {
   );
 
   useFrame((state) => {
-    const colorHex = theme === "dark" ? "#00D4FF" : "#1E3A8A";
+    const colorHex = theme === "dark" ? "#00D4FF" : "#0F172A";
     color.set(colorHex);
 
     uniformsList.forEach((uniforms) => {
@@ -61,7 +61,7 @@ export function VascularConnections({ theme }: { theme: string }) {
                 // Heartbeat pulse throttled down 50%
                 float pulse = sin(vUv.x * 30.0 - uTime * 4.0) * 0.5 + 0.5;
                 float intensity = pow(pulse, 4.0);
-                gl_FragColor = vec4(uColor * (1.0 + intensity * 0.75), intensity * 0.175 + 0.1);
+                gl_FragColor = vec4(uColor * (1.0 + intensity * 1.5), intensity * 0.35 + 0.25);
               }
             `}
           />

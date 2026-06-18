@@ -41,7 +41,7 @@ export function CookieBanner() {
               <p className="text-sm text-cool-grey dark:text-gray-300">
                 We utilize essential cookies to guarantee core platform functionality and
                 infrastructural security. With your authorization, we deploy supplementary tracking
-                mechanisms to optimize performance analytics. All data is processed in strict
+                mechanisms to optimise performance analytics. All data is processed in strict
                 compliance with the UK GDPR framework.
               </p>
             </div>
