@@ -26,17 +26,17 @@ export default function About() {
         <h2 className="text-3xl font-bold mb-8">Our Team</h2>
         <div className="grid gap-8">
           <GlassCard className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div className="flex flex-col items-center">
-              <div className="w-full h-80 bg-gradient-to-b from-blue-500/20 to-purple-500/20 overflow-hidden">
+            <div className="flex flex-col md:flex-row items-center p-8 gap-8">
+              <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 rounded-full bg-gradient-to-b from-blue-500/20 to-purple-500/20 overflow-hidden border-4 border-slate-200 dark:border-white/10 shadow-2xl">
                 <Image
-                  src="/images/gabs.jpeg"
+                  src="/images/gabs.png"
                   alt="Gabriele Iacopo Langellotto"
                   width={800}
                   height={800}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-8 text-center w-full">
+              <div className="text-center md:text-left flex-1">
                 <h3 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">
                   Gabriele Iacopo Langellotto
                 </h3>
