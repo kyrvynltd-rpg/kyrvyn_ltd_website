@@ -10,7 +10,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full mt-auto mt-20 backdrop-blur-lg bg-white/70 dark:bg-slate-900/40 border-t border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto p-12 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="page-container py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Registration Column */}
         <div className="flex flex-col gap-3">
           <span className="font-bold text-lg text-slate-900 dark:text-white tracking-tighter">
@@ -25,15 +25,13 @@ export default function Footer() {
               Business Focus: Bespoke websites, technical consulting, secure integrations, and
               platform modernisation.
             </span>
-            <span>Company Registration Number: 17078769</span>
+            <span>Company Registration Number: 17246800</span>
           </div>
           <div className="flex flex-col gap-1 mt-4 text-sm">
             <span className="font-semibold text-slate-900 dark:text-white">
               Registered Address:
             </span>
-            <span>124-128 City Road</span>
             <span>London, United Kingdom</span>
-            <span>EC1V 2NX</span>
           </div>
         </div>
 

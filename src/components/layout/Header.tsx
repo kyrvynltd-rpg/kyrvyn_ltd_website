@@ -60,7 +60,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/70 dark:bg-slate-900/50 border-b border-slate-200 dark:border-white/10 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto py-4 px-8 flex items-center justify-between relative z-[60]">
+      <div className="page-container py-4 flex items-center justify-between relative z-[60]">
         <Link
           href="/"
           className="flex items-center font-black tracking-tight text-slate-900 dark:text-white"

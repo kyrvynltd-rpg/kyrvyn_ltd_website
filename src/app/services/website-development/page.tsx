@@ -145,16 +145,16 @@ export default function WebsiteDevelopmentServicePage() {
 
       {/* Call to Action */}
       <section className="w-full">
-        <GlassCard className="p-12 text-center bg-slate-900 dark:bg-slate-800 relative overflow-hidden group">
+        <GlassCard className="p-12 text-center relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-r from-accent-maroon/20 to-accent-blood/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-black mb-6 text-white">Ready to elevate your business?</h2>
-            <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-black mb-6 text-slate-900 dark:text-white">Ready to elevate your business?</h2>
+            <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
               Whether you want complete independence or a hands-off experience, we have the perfect bespoke website solution for you. Let&apos;s get started today.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-transform"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-transform"
             >
               Book a consultation <ArrowRight size={20} />
             </Link>

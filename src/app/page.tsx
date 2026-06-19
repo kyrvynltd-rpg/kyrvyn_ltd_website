@@ -37,12 +37,20 @@ export default function Home() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-accent-maroon dark:bg-accent-blood text-white rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(0,0,0,0.12)] dark:shadow-[0_0_24px_rgba(0,212,255,0.18)]"
-              >
-                Book a consultation <ArrowRight size={20} />
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-accent-maroon dark:bg-accent-blood text-white rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(0,0,0,0.12)] dark:shadow-[0_0_24px_rgba(0,212,255,0.18)]"
+                >
+                  Book a consultation <ArrowRight size={20} />
+                </Link>
+                <Link
+                  href="#quiz"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-all"
+                >
+                  Take the Offer Quiz
+                </Link>
+              </div>
             </motion.div>
           </GlassCard>
         </motion.div>
@@ -113,7 +121,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full">
+      <section id="quiz" className="w-full scroll-mt-24">
         <div className="flex flex-col gap-4 mb-8">
           <h2 className="text-2xl font-semibold border-b pb-4 border-black/10 dark:border-white/10">
             Find the right offer
