@@ -12,21 +12,21 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "enterprise-web-platform-modernization",
-    title: "Enterprise Web Platform Modernization",
+    slug: "enterprise-web-platform-modernisation",
+    title: "Enterprise Web Platform Modernisation",
     subtitle: "Performance, accessibility, and UX uplift for a complex web application.",
     industry: "Enterprise SaaS",
     services: ["Bespoke Website Development", "Performance Improvements", "UX Upgrades"],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "CI Quality Gates"],
     outcomes: [
-      "Improved Lighthouse scores through performance budgets and image optimization",
+      "Improved Lighthouse scores through performance budgets and image optimisation",
       "Reduced UI friction with clearer navigation and conversion paths",
       "Established a reusable design system for long-term consistency",
     ],
     problem:
       "The existing UI lacked consistent patterns, had performance bottlenecks, and did not provide clear user journeys to key actions.",
     solution:
-      "Implemented a component-driven design system, standardized layout and typography, and introduced measurable quality gates across the delivery pipeline.",
+      "Implemented a component-driven design system, standardised layout and typography, and introduced measurable quality gates across the delivery pipeline.",
   },
   {
     slug: "blockchain-protocol-integration-showcase",

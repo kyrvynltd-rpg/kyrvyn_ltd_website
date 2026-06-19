@@ -49,7 +49,7 @@ export default function ServicesHubPage() {
             Or Browse by Service Track
           </h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
-            Explore our specialized disciplines and discover how we can elevate your technical operations.
+            Explore our specialised disciplines and discover how we can elevate your technical operations.
           </p>
         </div>
 
