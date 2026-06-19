@@ -11,7 +11,7 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   {
-    href: "#",
+    href: "/services",
     label: "Services",
     subLinks: [
       { href: "/services/website-development", label: "Website Development" },
@@ -71,9 +71,9 @@ export default function Header() {
           {links.map((link) => (
             link.subLinks ? (
               <div key={link.label} className="relative group py-2">
-                <span className="text-slate-900 font-semibold dark:text-white cursor-pointer hover:text-accent-maroon dark:hover:text-accent-blood transition-colors">
+                <Link href={link.href} className="text-slate-900 font-semibold dark:text-white hover:text-accent-maroon dark:hover:text-accent-blood transition-colors">
                   {link.label}
-                </span>
+                </Link>
                 <div className="absolute top-full left-0 hidden group-hover:flex flex-col gap-2 bg-white dark:bg-slate-900 p-4 rounded-xl shadow-xl border border-slate-200 dark:border-white/10 min-w-[200px]">
                   {link.subLinks.map(sub => (
                     <Link key={sub.href} href={sub.href} className="text-sm text-slate-700 dark:text-slate-300 hover:text-accent-maroon dark:hover:text-accent-blood transition-colors font-medium">
@@ -127,9 +127,13 @@ export default function Header() {
               {links.map((link) => (
                 link.subLinks ? (
                   <div key={link.label} className="flex flex-col items-center gap-4">
-                    <span className="text-3xl tracking-tighter text-slate-900 font-semibold dark:text-white">
+                    <Link
+                      href={link.href}
+                      className="text-3xl tracking-tighter text-slate-900 font-semibold dark:text-white hover:text-accent-maroon dark:hover:text-accent-blood transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
                       {link.label}
-                    </span>
+                    </Link>
                     <div className="flex flex-col items-center gap-4">
                       {link.subLinks.map((sub) => (
                         <Link
