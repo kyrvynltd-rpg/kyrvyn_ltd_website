@@ -7,11 +7,12 @@ import { caseStudies } from "@/lib/caseStudies";
 export default function Projects() {
   return (
     <div className="py-12">
-      <SectionHeading
-        title="Projects"
-        subtitle="Selected examples of bespoke website development, technical consulting, and custom development across integrations, blockchain, performance, UX, and platform modernisation."
-      />
-      <SectionDivider className="mt-8 mb-10" />
+      <section className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-16">
+        <h1 className="text-5xl font-bold tracking-tight mb-6 text-slate-900 dark:text-white">Projects</h1>
+        <p className="text-xl text-slate-700 dark:text-slate-300">
+          Selected examples of bespoke website development, technical consulting, and custom development across integrations, blockchain, performance, UX, and platform modernisation.
+        </p>
+      </section>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {caseStudies.map((cs) => (

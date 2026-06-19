@@ -67,13 +67,13 @@ export default function Contact() {
 
   return (
     <div className="py-12 max-w-2xl mx-auto">
-      <GlassCard className="p-8 mb-12 shadow-xl text-center md:text-left">
-        <h1 className="text-5xl font-bold mb-4 text-slate-900 dark:text-white">Contact</h1>
-        <p className="text-slate-900 dark:text-slate-400">
+      <section className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-12">
+        <h1 className="text-5xl font-bold mb-6 text-slate-900 dark:text-white tracking-tight">Contact</h1>
+        <p className="text-xl text-slate-700 dark:text-slate-300 max-w-2xl">
           Tell us whether you need a bespoke website, technical consulting, or custom development.
           We’ll respond with next steps, scope guidance, and a practical route forward.
         </p>
-      </GlassCard>
+      </section>
 
       {/* Minimal Contact Form */}
       <GlassCard className="p-8 group shadow-2xl">

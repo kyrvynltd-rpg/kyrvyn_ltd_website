@@ -4,9 +4,11 @@ import Image from "next/image";
 export default function About() {
   return (
     <div className="flex flex-col gap-20 py-12">
-      <section className="max-w-3xl">
-        <h1 className="text-5xl font-bold mb-8">About Us</h1>
-        <GlassCard className="p-8 prose prose-lg dark:prose-invert max-w-none">
+      <section className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-4">
+        <h1 className="text-5xl font-bold mb-4 text-slate-900 dark:text-white tracking-tight">About Us</h1>
+      </section>
+      <section className="max-w-3xl mx-auto">
+        <GlassCard className="p-8 prose prose-lg dark:prose-invert max-w-none shadow-xl">
           <h2 className="text-accent-maroon dark:text-accent-blood mt-0">Our Mission</h2>
           <p className="text-slate-900 dark:text-slate-400">
             Kyrvyn Ltd is a UK technology company focused on sellable, practical digital services

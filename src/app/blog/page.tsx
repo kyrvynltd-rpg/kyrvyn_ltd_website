@@ -47,19 +47,18 @@ export default async function Blog() {
 
   return (
     <div className="py-12 max-w-4xl mx-auto z-10 relative px-4">
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-        <GlassCard className="p-8 md:flex-1 shadow-xl">
-          <h1 className="text-5xl font-bold mb-4 font-serif text-slate-900 dark:text-white">
-            Insights
-          </h1>
-          <p className="text-slate-900 dark:text-slate-400">
-            Articles, notes, and practical guidance on bespoke websites, technical consulting, and
-            custom development.
-          </p>
-        </GlassCard>
-
-        <NewsletterForm compact />
-      </div>
+      <section className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-16">
+        <h1 className="text-5xl font-bold mb-6 font-serif text-slate-900 dark:text-white tracking-tight">
+          Insights
+        </h1>
+        <p className="text-xl text-slate-700 dark:text-slate-300 max-w-2xl mb-8">
+          Articles, notes, and practical guidance on bespoke websites, technical consulting, and
+          custom development.
+        </p>
+        <div className="w-full max-w-md">
+          <NewsletterForm compact />
+        </div>
+      </section>
 
       <div className="flex flex-col gap-12">
         {posts.length === 0 && (
