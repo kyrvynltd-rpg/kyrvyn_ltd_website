@@ -7,9 +7,12 @@ export default function Projects() {
   return (
     <div className="py-12">
       <section className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-16">
-        <h1 className="text-5xl font-bold tracking-tight mb-6 text-slate-900 dark:text-white">Projects</h1>
+        <h1 className="text-5xl font-bold tracking-tight mb-6 text-slate-900 dark:text-white">
+          Projects
+        </h1>
         <p className="text-xl text-slate-700 dark:text-slate-300">
-          Selected examples of bespoke website development, technical consulting, and custom development across integrations, blockchain, performance, UX, and platform modernisation.
+          Selected examples of bespoke website development, technical consulting, and custom
+          development across integrations, blockchain, performance, UX, and platform modernisation.
         </p>
       </section>
 

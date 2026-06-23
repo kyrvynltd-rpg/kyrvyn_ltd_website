@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/Button";
 import { useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 
-
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [error, setError] = useState<string>("");
@@ -68,7 +67,9 @@ export default function Contact() {
   return (
     <div className="py-12 max-w-2xl mx-auto">
       <section className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-12">
-        <h1 className="text-5xl font-bold mb-6 text-slate-900 dark:text-white tracking-tight">Contact</h1>
+        <h1 className="text-5xl font-bold mb-6 text-slate-900 dark:text-white tracking-tight">
+          Contact
+        </h1>
         <p className="text-xl text-slate-700 dark:text-slate-300 max-w-2xl">
           Tell us whether you need a bespoke website, technical consulting, or custom development.
           We’ll respond with next steps, scope guidance, and a practical route forward.

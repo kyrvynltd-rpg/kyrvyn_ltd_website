@@ -67,7 +67,10 @@ const questions: Question[] = [
     options: [
       { label: "Launch a website that looks premium and converts", scores: { website: 3 } },
       { label: "Get a clear plan before we build anything", scores: { consulting: 3 } },
-      { label: "Connect systems / automate workflows / ship complex features", scores: { custom: 3 } },
+      {
+        label: "Connect systems / automate workflows / ship complex features",
+        scores: { custom: 3 },
+      },
     ],
   },
   {
@@ -76,14 +79,20 @@ const questions: Question[] = [
     options: [
       { label: "Low trust or low conversion", scores: { website: 2, consulting: 1 } },
       { label: "Unclear scope and decision paralysis", scores: { consulting: 3 } },
-      { label: "Slow site, brittle code, or operational friction", scores: { custom: 2, consulting: 1 } },
+      {
+        label: "Slow site, brittle code, or operational friction",
+        scores: { custom: 2, consulting: 1 },
+      },
     ],
   },
   {
     id: "risk",
     title: "What’s your biggest delivery risk?",
     options: [
-      { label: "We need speed, but we can’t afford quality issues", scores: { website: 1, custom: 2 } },
+      {
+        label: "We need speed, but we can’t afford quality issues",
+        scores: { website: 1, custom: 2 },
+      },
       { label: "We might build the wrong thing without guidance", scores: { consulting: 3 } },
       { label: "Security and reliability have to be solid", scores: { custom: 3 } },
     ],
@@ -94,7 +103,10 @@ const questions: Question[] = [
     options: [
       { label: "New build or a full redesign", scores: { website: 2 } },
       { label: "Existing product that needs direction", scores: { consulting: 2, custom: 1 } },
-      { label: "Existing platform that needs upgrades/integrations", scores: { custom: 2, consulting: 1 } },
+      {
+        label: "Existing platform that needs upgrades/integrations",
+        scores: { custom: 2, consulting: 1 },
+      },
     ],
   },
 ];
@@ -102,7 +114,7 @@ const questions: Question[] = [
 function pickBestOffer(scores: Record<OfferKey, number>): OfferKey {
   const entries = Object.entries(scores) as Array<[OfferKey, number]>;
   entries.sort((a: [OfferKey, number], b: [OfferKey, number]) => b[1] - a[1]);
-  const [topKey] = entries[0] ?? ["consulting", 0];
+  const [topKey] = entries[0];
   return topKey;
 }
 
@@ -174,7 +186,9 @@ export function OfferQuiz({ className = "" }: { className?: string }) {
                 className="flex items-start gap-3 rounded-2xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-white/5 px-4 py-3"
               >
                 <div className="mt-1 h-2 w-2 rounded-full bg-accent-maroon dark:bg-accent-blood shrink-0" />
-                <div className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{b}</div>
+                <div className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                  {b}
+                </div>
               </div>
             ))}
           </div>

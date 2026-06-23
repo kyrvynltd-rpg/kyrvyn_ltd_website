@@ -23,7 +23,8 @@ export default function ServicesHubPage() {
               Tailored Technical Solutions
             </h1>
             <p className="text-xl md:text-2xl text-slate-700 dark:text-slate-300 mx-auto font-medium mb-10 max-w-2xl">
-              We don&apos;t just write code. We deliver strategic, bespoke solutions designed to solve your exact business constraints and scale your platform.
+              We don&apos;t just write code. We deliver strategic, bespoke solutions designed to
+              solve your exact business constraints and scale your platform.
             </p>
           </GlassCard>
         </motion.div>
@@ -36,7 +37,8 @@ export default function ServicesHubPage() {
             Find the right service
           </h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-3xl">
-            Answer a few quick questions to get a best-fit recommendation and a prefilled brief you can send directly to our experts.
+            Answer a few quick questions to get a best-fit recommendation and a prefilled brief you
+            can send directly to our experts.
           </p>
         </div>
         <OfferQuiz />
@@ -49,7 +51,8 @@ export default function ServicesHubPage() {
             Or Browse by Service Track
           </h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
-            Explore our specialised disciplines and discover how we can elevate your technical operations.
+            Explore our specialised disciplines and discover how we can elevate your technical
+            operations.
           </p>
         </div>
 
@@ -66,7 +69,8 @@ export default function ServicesHubPage() {
               Bespoke Website Development
             </h3>
             <p className="text-slate-700 dark:text-slate-300 mb-6 flex-grow">
-              High-converting standalone websites delivered in 48/72 hours. Perfect for businesses needing immediate credibility and zero technical headache.
+              High-converting standalone websites delivered in 48/72 hours. Perfect for businesses
+              needing immediate credibility and zero technical headache.
             </p>
             <div className="text-sm font-bold text-accent-maroon dark:text-accent-blood flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity mt-auto">
               Explore Track <ArrowRight size={16} />
@@ -85,7 +89,8 @@ export default function ServicesHubPage() {
               Technical Consulting & Architecture
             </h3>
             <p className="text-slate-700 dark:text-slate-300 mb-6 flex-grow">
-              De-risk your decisions with clear execution roadmaps, system architecture design, and comprehensive codebase audits.
+              De-risk your decisions with clear execution roadmaps, system architecture design, and
+              comprehensive codebase audits.
             </p>
             <div className="text-sm font-bold text-blue-600 dark:text-blue-400 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity mt-auto">
               Explore Track <ArrowRight size={16} />
@@ -104,7 +109,8 @@ export default function ServicesHubPage() {
               Custom Integrations & Modernisation
             </h3>
             <p className="text-slate-700 dark:text-slate-300 mb-6 flex-grow">
-              Complex development for enterprise integrations, blockchain solutions, and secure platform hardening.
+              Complex development for enterprise integrations, blockchain solutions, and secure
+              platform hardening.
             </p>
             <div className="text-sm font-bold text-purple-600 dark:text-purple-400 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity mt-auto">
               Explore Track <ArrowRight size={16} />
@@ -118,9 +124,12 @@ export default function ServicesHubPage() {
         <GlassCard className="p-12 text-center relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-r from-accent-maroon/20 to-accent-blood/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-black mb-6 text-slate-900 dark:text-white">Not sure what you need?</h2>
+            <h2 className="text-3xl md:text-4xl font-black mb-6 text-slate-900 dark:text-white">
+              Not sure what you need?
+            </h2>
             <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-              Skip the browsing and talk directly to an expert. We&apos;ll help you clarify your requirements and build a practical route forward.
+              Skip the browsing and talk directly to an expert. We&apos;ll help you clarify your
+              requirements and build a practical route forward.
             </p>
             <Link
               href="/contact"

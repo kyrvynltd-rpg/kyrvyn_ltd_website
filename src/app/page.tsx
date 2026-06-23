@@ -102,7 +102,9 @@ export default function Home() {
 
           <GlassCard className="p-8 group hover:-translate-y-2 transition-transform duration-300 relative flex flex-col">
             <Link href="/services/custom-development" className="absolute inset-0 z-10 block">
-              <span className="sr-only">View Custom Integrations & Platform Modernisation Service</span>
+              <span className="sr-only">
+                View Custom Integrations & Platform Modernisation Service
+              </span>
             </Link>
             <div className="w-12 h-12 rounded-lg bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-6">
               <Lock size={24} />

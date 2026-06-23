@@ -22,9 +22,9 @@ test("projects listing loads", async ({ page }) => {
 });
 
 test("projects detail route renders", async ({ page }) => {
-  await page.goto("/projects/enterprise-web-platform-modernization");
+  await page.goto("/projects/enterprise-web-platform-modernisation");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "Enterprise Web Platform Modernization",
+    "Enterprise Web Platform Modernisation",
   );
 });
 

@@ -5,7 +5,9 @@ export default function About() {
   return (
     <div className="flex flex-col gap-20 py-12">
       <section className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-4">
-        <h1 className="text-5xl font-bold mb-4 text-slate-900 dark:text-white tracking-tight">About Us</h1>
+        <h1 className="text-5xl font-bold mb-4 text-slate-900 dark:text-white tracking-tight">
+          About Us
+        </h1>
       </section>
       <section className="max-w-3xl mx-auto">
         <GlassCard className="p-8 prose prose-lg dark:prose-invert max-w-none shadow-xl">
@@ -46,9 +48,9 @@ export default function About() {
                   Founder & Technical Consultant
                 </p>
                 <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                  Full-stack developer focused on bespoke website delivery, technical consulting, and
-                  custom development for clients who need practical solutions, resilient platforms,
-                  and strong user experience.
+                  Full-stack developer focused on bespoke website delivery, technical consulting,
+                  and custom development for clients who need practical solutions, resilient
+                  platforms, and strong user experience.
                 </p>
               </div>
             </div>
@@ -57,9 +59,7 @@ export default function About() {
 
         {/* Team Capabilities Highlight */}
         <GlassCard className="mt-12 p-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
-          <h3 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">
-            What We Sell
-          </h3>
+          <h3 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">What We Sell</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="flex flex-col">
               <div className="text-3xl font-bold text-accent-maroon dark:text-accent-blood mb-2">

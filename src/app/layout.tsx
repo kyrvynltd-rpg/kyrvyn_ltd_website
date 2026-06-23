@@ -52,10 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <BackgroundBlocks />
           <div className="relative z-10 flex min-h-screen flex-col">
             <Header />
-            <main
-              id="main"
-              className="flex-1 page-container py-8 flex flex-col justify-center"
-            >
+            <main id="main" className="flex-1 page-container py-8 flex flex-col justify-center">
               {children}
             </main>
             <Footer />

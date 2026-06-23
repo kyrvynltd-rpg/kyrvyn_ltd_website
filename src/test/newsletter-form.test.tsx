@@ -69,4 +69,43 @@ describe("NewsletterForm", () => {
     expect(await screen.findByText("Unable to subscribe. Try again.")).toBeInTheDocument();
     vi.unstubAllGlobals();
   });
+
+  it("renders non-compact and submits via API", async () => {
+    process.env.NEXT_PUBLIC_STATIC_EXPORT = "0";
+    const fetchMock = vi.fn(async () => ({ ok: true })) as unknown as typeof fetch;
+    vi.stubGlobal("fetch", fetchMock);
+
+    render(<NewsletterForm />);
+    expect(screen.getByText("Get Kyrvyn Updates")).toBeInTheDocument();
+
+    await userEvent.type(
+      screen.getByPlaceholderText("Enter your email..."),
+      "noncompact@example.com",
+    );
+    await userEvent.click(screen.getByRole("button", { name: "Subscribe" }));
+
+    expect(fetchMock).toHaveBeenCalledWith(
+      "/api/newsletter",
+      expect.objectContaining({ method: "POST" }),
+    );
+    expect(await screen.findByText("Subscription request prepared.")).toBeInTheDocument();
+    vi.unstubAllGlobals();
+  });
+
+  it("renders non-compact and shows error on API failure", async () => {
+    process.env.NEXT_PUBLIC_STATIC_EXPORT = "0";
+    const fetchMock = vi.fn(async () => ({ ok: false })) as unknown as typeof fetch;
+    vi.stubGlobal("fetch", fetchMock);
+
+    render(<NewsletterForm />);
+    expect(screen.getByText("Get Kyrvyn Updates")).toBeInTheDocument();
+
+    await userEvent.type(
+      screen.getByPlaceholderText("Enter your email..."),
+      "noncompact-fail@example.com",
+    );
+    await userEvent.click(screen.getByRole("button", { name: "Subscribe" }));
+    expect(await screen.findByText("Unable to subscribe. Try again.")).toBeInTheDocument();
+    vi.unstubAllGlobals();
+  });
 });

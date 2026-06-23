@@ -102,8 +102,8 @@ export function NewsletterForm({
         Get Kyrvyn Updates
       </h2>
       <p className="text-slate-700 dark:text-slate-300 mb-8 max-w-lg">
-        Occasional updates on bespoke websites, technical consulting, and custom development.
-        Opt out anytime.
+        Occasional updates on bespoke websites, technical consulting, and custom development. Opt
+        out anytime.
       </p>
       <form className="w-full max-w-md flex flex-col sm:flex-row gap-3" onSubmit={onSubmit}>
         <input

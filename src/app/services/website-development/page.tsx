@@ -22,7 +22,8 @@ export default function WebsiteDevelopmentServicePage() {
               Bespoke Website Development
             </h1>
             <p className="text-xl md:text-2xl text-slate-700 dark:text-slate-300 mx-auto font-medium mb-10 max-w-2xl">
-              A high-converting, 1-page standalone website designed to solve your specific business pain points. Get your website in <strong>48/72hs</strong>.
+              A high-converting, 1-page standalone website designed to solve your specific business
+              pain points. Get your website in <strong>48/72hs</strong>.
             </p>
             <motion.div
               initial={{ y: 20, opacity: 0 }}
@@ -48,25 +49,67 @@ export default function WebsiteDevelopmentServicePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <p className="text-lg text-slate-700 dark:text-slate-300 mb-6">
-              We focus on building a professional online presence that actually works for you. Our core offer is a high-converting, 1-page standalone website that includes all the essential sections you need to succeed online.
+              We focus on building a professional online presence that actually works for you. Our
+              core offer is a high-converting, 1-page standalone website that includes all the
+              essential sections you need to succeed online.
             </p>
             <ul className="space-y-4 text-slate-700 dark:text-slate-300">
-              <li className="flex items-center gap-3"><CheckCircle2 className="text-accent-maroon dark:text-accent-blood flex-shrink-0" size={24} /> A professional hero section (what you do)</li>
-              <li className="flex items-center gap-3"><CheckCircle2 className="text-accent-maroon dark:text-accent-blood flex-shrink-0" size={24} /> A bio/photo establishing credibility</li>
-              <li className="flex items-center gap-3"><CheckCircle2 className="text-accent-maroon dark:text-accent-blood flex-shrink-0" size={24} /> A clear list of your services</li>
-              <li className="flex items-center gap-3"><CheckCircle2 className="text-accent-maroon dark:text-accent-blood flex-shrink-0" size={24} /> A client testimonial section for social proof</li>
-              <li className="flex items-center gap-3"><CheckCircle2 className="text-accent-maroon dark:text-accent-blood flex-shrink-0" size={24} /> UK GDPR-compliant privacy policy footer</li>
-              <li className="flex items-center gap-3"><CheckCircle2 className="text-accent-maroon dark:text-accent-blood flex-shrink-0" size={24} /> Prominent call-to-action (embedded Calendly or contact form)</li>
+              <li className="flex items-center gap-3">
+                <CheckCircle2
+                  className="text-accent-maroon dark:text-accent-blood flex-shrink-0"
+                  size={24}
+                />{" "}
+                A professional hero section (what you do)
+              </li>
+              <li className="flex items-center gap-3">
+                <CheckCircle2
+                  className="text-accent-maroon dark:text-accent-blood flex-shrink-0"
+                  size={24}
+                />{" "}
+                A bio/photo establishing credibility
+              </li>
+              <li className="flex items-center gap-3">
+                <CheckCircle2
+                  className="text-accent-maroon dark:text-accent-blood flex-shrink-0"
+                  size={24}
+                />{" "}
+                A clear list of your services
+              </li>
+              <li className="flex items-center gap-3">
+                <CheckCircle2
+                  className="text-accent-maroon dark:text-accent-blood flex-shrink-0"
+                  size={24}
+                />{" "}
+                A client testimonial section for social proof
+              </li>
+              <li className="flex items-center gap-3">
+                <CheckCircle2
+                  className="text-accent-maroon dark:text-accent-blood flex-shrink-0"
+                  size={24}
+                />{" "}
+                UK GDPR-compliant privacy policy footer
+              </li>
+              <li className="flex items-center gap-3">
+                <CheckCircle2
+                  className="text-accent-maroon dark:text-accent-blood flex-shrink-0"
+                  size={24}
+                />{" "}
+                Prominent call-to-action (embedded Calendly or contact form)
+              </li>
             </ul>
           </div>
           <GlassCard className="p-8 flex flex-col justify-center items-center text-center group">
-             <div className="w-20 h-20 rounded-full bg-accent-maroon/10 text-accent-maroon dark:text-accent-blood flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-               <Zap size={40} />
-             </div>
-             <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Lightning Fast Delivery</h3>
-             <p className="text-lg text-slate-600 dark:text-slate-400">
-               Stop waiting weeks for a website. We deliver your complete, high-converting single-page site in just <strong className="text-slate-900 dark:text-white">48/72hs</strong>.
-             </p>
+            <div className="w-20 h-20 rounded-full bg-accent-maroon/10 text-accent-maroon dark:text-accent-blood flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <Zap size={40} />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
+              Lightning Fast Delivery
+            </h3>
+            <p className="text-lg text-slate-600 dark:text-slate-400">
+              Stop waiting weeks for a website. We deliver your complete, high-converting
+              single-page site in just{" "}
+              <strong className="text-slate-900 dark:text-white">48/72hs</strong>.
+            </p>
           </GlassCard>
         </div>
       </section>
@@ -78,7 +121,8 @@ export default function WebsiteDevelopmentServicePage() {
             Choose Your Track
           </h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
-            We position our technical tracks as business solutions, designed to solve your specific pain points as a busy freelancer or business owner.
+            We position our technical tracks as business solutions, designed to solve your specific
+            pain points as a busy freelancer or business owner.
           </p>
         </div>
 
@@ -89,7 +133,7 @@ export default function WebsiteDevelopmentServicePage() {
               <Star size={16} className="fill-white" /> Our Primary Recommendation
             </div>
             <div className="w-14 h-14 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-               <Shield size={28} />
+              <Shield size={28} />
             </div>
             <h3 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">
               The &quot;Hands-Off&quot; Track
@@ -98,13 +142,24 @@ export default function WebsiteDevelopmentServicePage() {
               Hardcoded (HTML/CSS/JS) + Maintenance
             </div>
             <p className="text-slate-700 dark:text-slate-300 mb-6 flex-grow">
-              A lightning-fast, ultra-secure, and maintenance-free solution. For clients who want <strong>zero technical headache</strong>. 
-              We offer this alongside a monthly retainer/maintenance service where we handle minor text changes, hosting management, and uptime monitoring for a small fee (e.g., £29–£49/month).
+              A lightning-fast, ultra-secure, and maintenance-free solution. For clients who want{" "}
+              <strong>zero technical headache</strong>. We offer this alongside a monthly
+              retainer/maintenance service where we handle minor text changes, hosting management,
+              and uptime monitoring for a small fee (e.g., £29–£49/month).
             </p>
             <ul className="space-y-3 text-slate-600 dark:text-slate-400 mb-8">
-              <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-blue-500 flex-shrink-0 mt-0.5" /> <span>Passive solution, we handle everything</span></li>
-              <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-blue-500 flex-shrink-0 mt-0.5" /> <span>Maximum security, no vulnerable plugins</span></li>
-              <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-blue-500 flex-shrink-0 mt-0.5" /> <span>Unmatched loading speeds</span></li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 size={20} className="text-blue-500 flex-shrink-0 mt-0.5" />{" "}
+                <span>Passive solution, we handle everything</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 size={20} className="text-blue-500 flex-shrink-0 mt-0.5" />{" "}
+                <span>Maximum security, no vulnerable plugins</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 size={20} className="text-blue-500 flex-shrink-0 mt-0.5" />{" "}
+                <span>Unmatched loading speeds</span>
+              </li>
             </ul>
             <Link
               href="/contact?track=hands-off"
@@ -117,7 +172,7 @@ export default function WebsiteDevelopmentServicePage() {
           {/* WordPress Option */}
           <GlassCard className="p-8 group hover:-translate-y-1 transition-transform duration-300 flex flex-col h-full">
             <div className="w-14 h-14 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-               <Settings size={28} />
+              <Settings size={28} />
             </div>
             <h3 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">
               The &quot;Independence&quot; Track
@@ -126,12 +181,23 @@ export default function WebsiteDevelopmentServicePage() {
               WordPress
             </div>
             <p className="text-slate-700 dark:text-slate-300 mb-6 flex-grow">
-              Built for freelancers who want complete ownership and control. Once we build the standalone landing page, you can easily log in to update your client testimonials, blog posts, or pricing without ever paying a developer.
+              Built for freelancers who want complete ownership and control. Once we build the
+              standalone landing page, you can easily log in to update your client testimonials,
+              blog posts, or pricing without ever paying a developer.
             </p>
             <ul className="space-y-3 text-slate-600 dark:text-slate-400 mb-8">
-              <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-emerald-500 flex-shrink-0 mt-0.5" /> <span>Complete ownership of your content</span></li>
-              <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-emerald-500 flex-shrink-0 mt-0.5" /> <span>User-friendly admin dashboard</span></li>
-              <li className="flex items-start gap-3"><CheckCircle2 size={20} className="text-emerald-500 flex-shrink-0 mt-0.5" /> <span>No ongoing maintenance fees required</span></li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 size={20} className="text-emerald-500 flex-shrink-0 mt-0.5" />{" "}
+                <span>Complete ownership of your content</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 size={20} className="text-emerald-500 flex-shrink-0 mt-0.5" />{" "}
+                <span>User-friendly admin dashboard</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 size={20} className="text-emerald-500 flex-shrink-0 mt-0.5" />{" "}
+                <span>No ongoing maintenance fees required</span>
+              </li>
             </ul>
             <Link
               href="/contact?track=independence"
@@ -148,9 +214,12 @@ export default function WebsiteDevelopmentServicePage() {
         <GlassCard className="p-12 text-center relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-r from-accent-maroon/20 to-accent-blood/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-black mb-6 text-slate-900 dark:text-white">Ready to elevate your business?</h2>
+            <h2 className="text-3xl md:text-4xl font-black mb-6 text-slate-900 dark:text-white">
+              Ready to elevate your business?
+            </h2>
             <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-              Whether you want complete independence or a hands-off experience, we have the perfect bespoke website solution for you. Let&apos;s get started today.
+              Whether you want complete independence or a hands-off experience, we have the perfect
+              bespoke website solution for you. Let&apos;s get started today.
             </p>
             <Link
               href="/contact"
