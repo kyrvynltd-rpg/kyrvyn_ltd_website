@@ -1,7 +1,6 @@
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Badge } from "@/components/ui/Badge";
 import { ButtonLink } from "@/components/ui/Button";
-import { SectionDivider, SectionHeading } from "@/components/ui/SectionHeading";
 import { caseStudies } from "@/lib/caseStudies";
 
 export default function Projects() {
