@@ -46,7 +46,7 @@ export default function About() {
                   Founder & Technical Consultant
                 </p>
                 <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                  Full-stack engineer focused on bespoke website delivery, technical consulting, and
+                  Full-stack developer focused on bespoke website delivery, technical consulting, and
                   custom development for clients who need practical solutions, resilient platforms,
                   and strong user experience.
                 </p>
